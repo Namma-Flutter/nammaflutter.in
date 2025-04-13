@@ -1,0 +1,9 @@
+{
+  "sponsors": [
+    { "name": "TechCorp", "logo": "/sponsors/techcorp.svg", "link": "https://techcorp.example.com" },
+    { "name": "DevStudio", "logo": "/sponsors/devstudio.svg", "link": "https://devstudio.example.com" },
+    { "name": "CodeLabs", "logo": "/sponsors/codelabs.svg", "link": "https://codelabs.example.com" },
+    { "name": "FlutterHub", "logo": "/sponsors/flutterhub.svg", "link": "https://flutterhub.example.com" }
+  ],
+  "becomeASponsorLink": "https://forms.example.com/become-a-sponsor"
+}

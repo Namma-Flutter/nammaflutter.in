@@ -1,0 +1,25 @@
+{
+  "title": "Community Voices",
+  "testimonials": [
+    {
+      "name": "Priya R.",
+      "role": "Mobile Developer",
+      "text": "Namma Flutter community has been instrumental in my growth as a Flutter developer. The meetups are incredibly informative!"
+    },
+    {
+      "name": "Karthik S.",
+      "role": "Tech Lead",
+      "text": "The hands-on workshops and collaborative environment make learning Flutter a joy. Proud to be part of this community."
+    },
+    {
+      "name": "Deepa M.",
+      "role": "Startup Founder",
+      "text": "Found amazing talent and mentorship through Namma Flutter. The community is supportive and welcoming."
+    },
+    {
+      "name": "Rahul V.",
+      "role": "Student Developer",
+      "text": "From beginner to confident developer - Namma Flutter made this journey possible with their excellent guidance."
+    }
+  ]
+}

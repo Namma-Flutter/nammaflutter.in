@@ -1,0 +1,38 @@
+{
+  "title": "About Namma Flutter",
+  "tagline": "Empowering Flutter Development in Chennai",
+  "description": "We are Chennai's premier Flutter community, bringing together developers, designers, and innovators to build the future of mobile applications.",
+  "mission": "To foster excellence in Flutter development through continuous learning, collaboration, and innovation.",
+  "vision": "To be the leading hub for Flutter expertise in South India, driving mobile innovation and developer growth.",
+  "features": [
+    {
+      "title": "Learn",
+      "description": "Access curated learning paths, hands-on workshops, and personalized mentorship from industry experts",
+      "icon": "📚"
+    },
+    {
+      "title": "Connect",
+      "description": "Join a thriving network of Flutter enthusiasts, share knowledge, and collaborate on innovative projects",
+      "icon": "🤝"
+    },
+    {
+      "title": "Grow",
+      "description": "Accelerate your career through practical experience, industry connections, and leadership opportunities",
+      "icon": "🚀"
+    }
+  ],
+  "stats": [
+    {
+      "number": "1000+",
+      "label": "Community Members"
+    },
+    {
+      "number": "50+",
+      "label": "Events Conducted"
+    },
+    {
+      "number": "100+",
+      "label": "Success Stories"
+    }
+  ]
+}

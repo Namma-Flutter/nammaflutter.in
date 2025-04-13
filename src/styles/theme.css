@@ -1,0 +1,26 @@
+:root {
+  --color-primary: #FFFFFF;
+  --color-secondary: #1D1D1E;
+  --color-accent: #0DC7FF;
+  --color-accent-light: #C6F3FF;
+  --color-highlight: #FFFAD2;
+}
+
+/* Apply theme colors to base elements */
+body {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+/* Utility classes for theme colors */
+.bg-primary { background-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-accent { background-color: var(--color-accent); }
+.bg-accent-light { background-color: var(--color-accent-light); }
+.bg-highlight { background-color: var(--color-highlight); }
+
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-accent { color: var(--color-accent); }
+.text-accent-light { color: var(--color-accent-light); }
+.text-highlight { color: var(--color-highlight); }

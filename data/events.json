@@ -1,0 +1,71 @@
+{
+  "title": "Upcoming Flutter Events",
+  "subtitle": "Join us for exciting workshops and meetups",
+  "events": [
+    {
+      "title": "Flutter State Management Workshop",
+      "date": "2024-02-15",
+      "time": "10:00 AM",
+      "location": "Tech Park, Chennai",
+      "type": "upcoming",
+      "description": "Deep dive into state management solutions in Flutter. Learn about Provider, Riverpod, and BLoC patterns with hands-on exercises.",
+      "speaker": {
+        "name": "Raj Kumar",
+        "role": "Senior Flutter Developer",
+        "company": "Google"
+      },
+      "tags": ["state-management", "workshop", "hands-on"],
+      "capacity": 50,
+      "price": "Free",
+      "showInBanner": true,
+      "registration_url": "https://forms.gle/xyz123"
+    },
+    {
+      "title": "Building Beautiful UIs with Flutter",
+      "date": "2024-03-01",
+      "time": "2:00 PM",
+      "location": "Innovation Hub",
+      "type": "upcoming",
+      "description": "Master the art of creating stunning user interfaces with Flutter. Topics include custom widgets, animations, and responsive design patterns.",
+      "speaker": {
+        "name": "Priya Singh",
+        "role": "UI/UX Specialist",
+        "company": "Microsoft"
+      },
+      "tags": ["ui-design", "animations", "workshop"],
+      "capacity": 40,
+      "price": "₹499",
+      "showInBanner": false
+    },
+    {
+      "title": "Flutter Testing Masterclass",
+      "date": "2024-01-20",
+      "time": "11:00 AM",
+      "location": "Virtual Event",
+      "type": "past",
+      "description": "A comprehensive guide to testing Flutter applications, covering unit tests, widget tests, and integration tests with best practices.",
+      "speaker": {
+        "name": "Arun Kumar",
+        "role": "Lead Developer",
+        "company": "Amazon"
+      },
+      "tags": ["testing", "quality-assurance", "virtual"],
+      "recording_url": "https://example.com/recording"
+    },
+    {
+      "title": "Flutter for Web Development",
+      "date": "2024-01-05",
+      "time": "3:00 PM",
+      "location": "Developer Space",
+      "type": "past",
+      "description": "Exploring Flutter web capabilities, PWA support, and deployment strategies for web applications built with Flutter.",
+      "speaker": {
+        "name": "Sneha Patel",
+        "role": "Flutter GDE",
+        "company": "Flutter Community"
+      },
+      "tags": ["web", "pwa", "deployment"],
+      "recording_url": "https://example.com/recording"
+    }
+  ]
+}
