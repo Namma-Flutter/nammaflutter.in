@@ -11,22 +11,24 @@ const Hero = () => {
   const bannerEvent = events.find((event: { type: string; showInBanner: boolean }) => event.type === 'upcoming' && event.showInBanner);
 
   return (
-    <section className="min-h-screen flex flex-col bg-gradient-to-r from-[#FFF5F1] to-[#FFEFEF] relative overflow-hidden">
+    <section className="min-h-screen flex flex-col bg-gradient-to-r from-[#E3F2FD] to-[#FFFDE7] relative overflow-hidden">
+      {/* Flutter Event Banner */}
       {bannerEvent && (
-        <div className="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white py-2 px-6 relative overflow-hidden animate-fadeIn">
+        <div className="w-full bg-gradient-to-r from-blue-500 via-blue-600 to-cyan-500 text-white py-3 px-6 relative overflow-hidden animate-fadeIn">
           <div className="absolute inset-0 opacity-10">
             <img src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern" />
           </div>
           <div className="container mx-auto flex items-center justify-between gap-4 relative z-10">
             <div className="flex items-center space-x-4">
-              <span className="bg-yellow-400 text-blue-900 px-3 py-1 rounded-full text-sm font-bold shadow-sm">
-                TOMORROW
+              <img src="/flutter-logo.svg" alt="Flutter Logo" className="w-8 h-8" />
+              <span className="bg-yellow-300 text-blue-900 px-3 py-1 rounded-full text-sm font-bold shadow-sm">
+                UPCOMING
               </span>
               <div className="flex items-center space-x-3">
                 <h3 className="font-bold text-lg text-white">{bannerEvent.title}</h3>
                 <div className="flex items-center space-x-2 text-blue-100">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                   <span>{bannerEvent.time}</span>
                 </div>
@@ -45,19 +47,19 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
         <div className="w-full md:w-1/2">
-          <span className="text-[#FF6B50] text-sm font-medium mb-4 inline-block">#flutterfashion</span>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 pt-2">
+          <span className="text-[#42A5F5] text-sm font-semibold mb-4 inline-block uppercase tracking-wider">Flutter Community Event</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-gray-900 pt-2">
             <div className="h-[120px] md:h-[150px] flex items-center justify-center">
               <TypeAnimation
                 sequence={[
-                  'Join Flutter Chennai Meetup 2024 🎯',
-                  1500,
-                  'Learn State Management & Best Practices 💡',
-                  1500,
-                  'Network with Flutter Experts 🤝',
-                  1500,
-                  'Build Your First Flutter App 🚀',
-                  1500
+                  'Flutter Chennai Meetup 2024 🚀',
+                  1800,
+                  'Workshops, Talks & Networking 💙',
+                  1800,
+                  'Grow Your Flutter Skills 🛠️',
+                  1800,
+                  'Connect with the Community 🌏',
+                  1800
                 ]}
                 wrapper="span"
                 speed={40}
@@ -67,41 +69,44 @@ const Hero = () => {
               />
             </div>
           </h1>
-          <p className="text-gray-600 mb-8 max-w-lg">
-            It's time to express the way you want to dress, because at the end, you're deserve to be cool.
+          <p className="text-gray-700 mb-8 max-w-lg text-lg">
+            Join us for an inspiring day of Flutter learning, hands-on workshops, and community networking. Whether you’re a beginner or an expert, there’s something for everyone!
           </p>
-          <button className="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition duration-300">
-            Explore More
-          </button>
+          <a href={bannerEvent ? bannerEvent.registration_url : '#'} target="_blank" rel="noopener noreferrer">
+            <button className="bg-[#02569B] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#039BE5] transition duration-300 shadow-lg flex items-center gap-2">
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 20.5L17.5 6H21V9.5L6.5 24L3 20.5Z" fill="white"/><path d="M17.5 6L21 2.5V6H17.5Z" fill="#42A5F5"/></svg>
+              <span>Join the Event</span>
+            </button>
+          </a>
 
           <div className="flex gap-12 mt-12">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900">200k+</h3>
-              <p className="text-gray-600">Sales Weekly</p>
+              <h3 className="text-2xl font-bold text-[#02569B]">500+</h3>
+              <p className="text-gray-600">Attendees</p>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900">150k+</h3>
-              <p className="text-gray-600">Members</p>
+              <h3 className="text-2xl font-bold text-[#02569B]">12</h3>
+              <p className="text-gray-600">Speakers</p>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900">300k+</h3>
-              <p className="text-gray-600">Item Deliver</p>
+              <h3 className="text-2xl font-bold text-[#02569B]">8</h3>
+              <p className="text-gray-600">Workshops</p>
             </div>
           </div>
         </div>
         {/* Decorative Elements */}
-        <div className="absolute top-12 left-12">
-          <span className="text-[#FF6B50] text-4xl">✧</span>
+        <div className="absolute top-12 left-12 animate-bounce">
+          <span className="text-[#42A5F5] text-4xl">✧</span>
         </div>
-        <div className="absolute bottom-12 right-1/4">
-          <span className="text-[#FF6B50] text-4xl">✦</span>
+        <div className="absolute bottom-12 right-1/4 animate-spin-slow">
+          <span className="text-[#42A5F5] text-4xl">✦</span>
         </div>
 
         {/* Curved Arrow */}
         <div className="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-24 h-24 md:block hidden">
           <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-            <path d="M20 50C20 50 40 30 50 50C60 70 80 50 80 50" stroke="#000" strokeWidth="2" strokeLinecap="round"/>
-            <path d="M75 45L80 50L75 55" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M20 50C20 50 40 30 50 50C60 70 80 50 80 50" stroke="#42A5F5" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M75 45L80 50L75 55" stroke="#42A5F5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
 
@@ -109,36 +114,36 @@ const Hero = () => {
         <div className="w-full md:w-1/2 relative">
           <div className="relative aspect-square max-w-[500px] mx-auto">
             {/* Circular Background */}
-            <div className="absolute inset-0 rounded-full bg-[#FFE4E4] overflow-hidden">
+            <div className="absolute inset-0 rounded-full bg-[#E3F2FD] overflow-hidden border-4 border-[#42A5F5] shadow-xl">
               <img
-                src="/hero-image.jpg"
-                alt="Fashion Models"
+                src="/flutter-event-hero.jpg"
+                alt="Flutter Community Event"
                 className="w-full h-full object-cover"
               />
             </div>
 
             {/* Floating Badges */}
-            <div className="absolute -top-4 right-12 bg-white py-2 px-4 rounded-full shadow-lg flex items-center gap-2">
-              <span>💳</span>
-              <span className="font-medium">Cod Payment</span>
+            <div className="absolute -top-4 right-12 bg-white py-2 px-4 rounded-full shadow-lg flex items-center gap-2 border border-[#42A5F5]">
+              <span>🎤</span>
+              <span className="font-medium text-[#02569B]">Talks</span>
             </div>
 
-            <div className="absolute -bottom-4 right-16 bg-white py-2 px-4 rounded-full shadow-lg flex items-center gap-2">
-              <span>✨</span>
-              <span className="font-medium">Quality</span>
+            <div className="absolute -bottom-4 right-16 bg-white py-2 px-4 rounded-full shadow-lg flex items-center gap-2 border border-[#42A5F5]">
+              <span>🛠️</span>
+              <span className="font-medium text-[#02569B]">Workshops</span>
             </div>
 
             {/* NEW! Tag */}
             <div className="absolute left-0 bottom-1/3 transform -translate-x-1/2 rotate-[-15deg]">
-              <div className="bg-black text-white px-4 py-1 rounded-full text-sm font-bold">
-                NEW!
+              <div className="bg-[#42A5F5] text-white px-4 py-1 rounded-full text-sm font-bold shadow-md">
+                COMMUNITY
               </div>
             </div>
 
             {/* Guarantee Badge */}
-            <div className="absolute top-8 left-8 bg-white py-2 px-4 rounded-full shadow-lg flex items-center gap-2">
-              <span>🎯</span>
-              <span className="font-medium">Guarantee</span>
+            <div className="absolute top-8 left-8 bg-white py-2 px-4 rounded-full shadow-lg flex items-center gap-2 border border-[#42A5F5]">
+              <span>🤝</span>
+              <span className="font-medium text-[#02569B]">Networking</span>
             </div>
           </div>
         </div>

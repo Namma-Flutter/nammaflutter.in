@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import EventsJson from '../../data/events.json';
+
 interface Event {
   title: string;
   date: string;
@@ -21,7 +22,6 @@ const Events = () => {
   const [eventsData] = useState<EventsData | null>(EventsJson as EventsData | null);
   const [filter, setFilter] = useState<'all' | 'upcoming' | 'past'>('all');
 
-
   if (!eventsData) return null;
 
   const filteredEvents = eventsData.events.filter(event => 
@@ -29,61 +29,59 @@ const Events = () => {
   );
 
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 via-cyan-50 to-indigo-50">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-5xl font-bold text-gray-800 mb-4">{eventsData.title}</h2>
-          <p className="text-xl text-gray-600">Join us for exciting Flutter events and workshops</p>
-          <div className="flex justify-center gap-4 mt-8">
+    <section className="py-20 bg-gradient-to-br from-[#E3F2FD] via-[#FFFDE7] to-[#B3E5FC] relative overflow-hidden">
+      {/* Flutter pattern background */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
+        <img src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern background" />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col items-center mb-8">
+          <img src="/flutter-logo.svg" alt="Flutter Logo" className="w-14 h-14 mb-2 drop-shadow" />
+          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#42A5F5] via-[#039BE5] to-[#00C6FB] drop-shadow-lg">{eventsData.title}</h2>
+          <p className="text-xl text-gray-700 mb-6">Join us for exciting Flutter events and workshops</p>
+          <div className="flex justify-center gap-4 mt-4">
             <button
               onClick={() => setFilter('all')}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${filter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+              className={`px-6 py-2 rounded-full transition-all duration-300 font-semibold ${filter === 'all' ? 'bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white shadow-md' : 'bg-white text-[#02569B] border border-[#B3E5FC] hover:bg-[#E3F2FD]'}`}
             >
               All Events
             </button>
             <button
               onClick={() => setFilter('upcoming')}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${filter === 'upcoming' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+              className={`px-6 py-2 rounded-full transition-all duration-300 font-semibold ${filter === 'upcoming' ? 'bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white shadow-md' : 'bg-white text-[#02569B] border border-[#B3E5FC] hover:bg-[#E3F2FD]'}`}
             >
               Upcoming
             </button>
             <button
               onClick={() => setFilter('past')}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${filter === 'past' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+              className={`px-6 py-2 rounded-full transition-all duration-300 font-semibold ${filter === 'past' ? 'bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white shadow-md' : 'bg-white text-[#02569B] border border-[#B3E5FC] hover:bg-[#E3F2FD]'}`}
             >
               Past Events
             </button>
           </div>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {filteredEvents.map((event, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className={`group relative overflow-hidden rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-105 ${event.type === 'upcoming' ? 'bg-white' : 'bg-gray-50'}`}
+              className={`group relative overflow-hidden rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-105 border-2 border-[#B3E5FC] ${event.type === 'upcoming' ? 'bg-white/90' : 'bg-white/70'}`}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/50 to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+              <div className="absolute inset-0 bg-gradient-to-b from-[#42A5F5]/10 via-[#039BE5]/20 to-[#00C6FB]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="p-8 relative z-10">
                 <div className="flex justify-between items-start mb-6">
-                  <h3 className="text-2xl font-bold text-gray-800 group-hover:text-white transition-colors duration-300">{event.title}</h3>
+                  <h3 className="text-2xl font-bold text-[#02569B] group-hover:text-[#039BE5] transition-colors duration-300">{event.title}</h3>
                   <span
-                    className={`px-4 py-1 rounded-full text-sm font-medium ${event.type === 'upcoming' ? 'bg-blue-500 text-white' : 'bg-gray-500 text-white'}`}
+                    className={`px-4 py-1 rounded-full text-sm font-bold shadow ${event.type === 'upcoming' ? 'bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white' : 'bg-gray-400 text-white'}`}
                   >
                     {event.type === 'upcoming' ? 'Upcoming' : 'Past'}
                   </span>
                 </div>
-                
-                <p className="text-gray-600 mb-8 line-clamp-2 group-hover:text-gray-100 transition-colors duration-300">{event.description}</p>
-                
-                <div className="flex flex-wrap gap-6 text-sm text-gray-500 group-hover:text-gray-200 transition-colors duration-300">
+                <p className="text-gray-700 mb-8 line-clamp-2 group-hover:text-[#02569B] transition-colors duration-300">{event.description}</p>
+                <div className="flex flex-wrap gap-6 text-sm text-[#039BE5] group-hover:text-[#02569B] transition-colors duration-300">
                   <span className="flex items-center gap-2">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -104,12 +102,11 @@ const Events = () => {
                     {event.location}
                   </span>
                 </div>
-                
                 {event.type === 'upcoming' && (
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="mt-8 w-full bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg group-hover:bg-white group-hover:text-blue-500"
+                    className="mt-8 w-full bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white px-8 py-4 rounded-xl font-bold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 group-hover:bg-white group-hover:text-[#039BE5] border-2 border-transparent group-hover:border-[#42A5F5]"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />

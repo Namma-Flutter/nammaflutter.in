@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import Hero from "@/components/Hero";
 import Sponsors from "@/components/Sponsors";
 import AboutUs from "@/components/AboutUs";
