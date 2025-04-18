@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "framer-motion": "^12.6.5",
+    "gray-matter": "^4.0.3",
     "next": "15.3.0",
+    "next-mdx-remote": "^5.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",

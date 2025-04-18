@@ -53,7 +53,7 @@ const Hero = () => {
             <path d="M100 15 Q55 60, 10 25" stroke="#02569B" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" filter="url(#shadow)"/>
             <defs>
               <filter id="shadow" x="-4" y="-4" width="118" height="68" filterUnits="userSpaceOnUse">
-                <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#42A5F5" flood-opacity="0.25"/>
+                <feDropShadow dx="0" dy="2" stdDeviation="2" floodColor="#42A5F5" floodOpacity="0.25"/>
               </filter>
             </defs>
             <path d="M15 20 L2 25 L12 32" stroke="#02569B" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
@@ -92,6 +92,11 @@ const Hero = () => {
               <span>Join the Event</span>
             </button>
           </a>
+          <div className="flex flex-wrap gap-2 mt-8">
+            <a href="/our-story" className="bg-[#42A5F5]/80 text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-[#02569B] hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#02569B]">Our Story</a>
+            <a href="/our-blogs" className="bg-[#42A5F5]/80 text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-[#02569B] hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#02569B]">Our Blogs</a>
+            <a href="/our-projects" className="bg-[#42A5F5]/80 text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-[#02569B] hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#02569B]">Our Projects</a>
+          </div>
 
           <div className="flex gap-6 md:gap-12 mt-6 md:mt-12">
             <div>
