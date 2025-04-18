@@ -27,23 +27,23 @@ const AboutUs = () => {
             {aboutData.tagline}
           </h2>
           <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">{aboutData.description}</p>
-          <div className="flex flex-col md:flex-row gap-8 justify-center text-center mb-12">
-            <div className="p-7 bg-white/80 rounded-2xl shadow-lg hover:shadow-blue-200 transition-shadow border border-[#B3E5FC]">
-              <h3 className="text-lg font-bold text-[#02569B] flex items-center justify-center gap-2">
-                <span className="text-2xl">🎯</span> Our Mission
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-12 justify-center text-center mb-12">
+            <div className="p-5 sm:p-7 bg-white/80 rounded-2xl shadow-lg hover:shadow-blue-200 transition-shadow border border-[#B3E5FC] w-full max-w-md mx-auto">
+              <h3 className="text-base sm:text-lg font-bold text-[#02569B] flex items-center justify-center gap-2">
+                <span className="text-xl sm:text-2xl">🎯</span> Our Mission
               </h3>
-              <p className="mt-2 text-gray-600">{aboutData.mission}</p>
+              <p className="mt-2 text-gray-600 text-sm sm:text-base">{aboutData.mission}</p>
             </div>
-            <div className="p-7 bg-white/80 rounded-2xl shadow-lg hover:shadow-blue-200 transition-shadow border border-[#B3E5FC]">
-              <h3 className="text-lg font-bold text-[#02569B] flex items-center justify-center gap-2">
-                <span className="text-2xl">🌟</span> Our Vision
+            <div className="p-5 sm:p-7 bg-white/80 rounded-2xl shadow-lg hover:shadow-blue-200 transition-shadow border border-[#B3E5FC] w-full max-w-md mx-auto">
+              <h3 className="text-base sm:text-lg font-bold text-[#02569B] flex items-center justify-center gap-2">
+                <span className="text-xl sm:text-2xl">🌟</span> Our Vision
               </h3>
-              <p className="mt-2 text-gray-600">{aboutData.vision}</p>
+              <p className="mt-2 text-gray-600 text-sm sm:text-base">{aboutData.vision}</p>
             </div>
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 mb-16">
           {aboutData.features.map((feature, index) => (
             <motion.div
               key={index}
@@ -51,11 +51,11 @@ const AboutUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               whileHover={{ scale: 1.07 }}
-              className="p-8 bg-gradient-to-br from-white via-[#E3F2FD] to-[#B3E5FC] rounded-2xl shadow-xl hover:shadow-blue-100 transition-all border border-[#B3E5FC] flex flex-col items-center"
+              className="p-6 sm:p-8 bg-gradient-to-br from-white via-[#E3F2FD] to-[#B3E5FC] rounded-2xl shadow-xl hover:shadow-blue-100 transition-all border border-[#B3E5FC] flex flex-col items-center min-w-0 w-full max-w-md mx-auto"
             >
-              <div className="text-5xl mb-4 drop-shadow-lg">{feature.icon}</div>
-              <h3 className="text-2xl font-extrabold mb-3 text-[#02569B]">{feature.title}</h3>
-              <p className="text-gray-700 leading-relaxed">{feature.description}</p>
+              <div className="text-4xl sm:text-5xl mb-4 drop-shadow-lg">{feature.icon}</div>
+              <h3 className="text-lg sm:text-2xl font-extrabold mb-3 text-[#02569B]">{feature.title}</h3>
+              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{feature.description}</p>
             </motion.div>
           ))}
         </div>
@@ -64,15 +64,15 @@ const AboutUs = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 max-w-3xl mx-auto"
         >
           {aboutData.stats.map((stat, index) => {
             const numericValue = parseInt(stat.number.replace(/\D/g, ''));
             const { count, ref } = useCountUp({ end: numericValue, duration: 2000 });
             return (
-              <div key={index} className="text-center p-6 rounded-xl bg-white/80 shadow-lg border border-[#B3E5FC]">
-                <h4 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#42A5F5] via-[#039BE5] to-[#00C6FB] mb-2 animate-gradient-move">{count}+</h4>
-                <p className="text-gray-700 mt-2 font-medium">{stat.label}</p>
+              <div key={index} className="text-center p-4 sm:p-6 rounded-xl bg-white/80 shadow-lg border border-[#B3E5FC] w-full max-w-xs mx-auto">
+                <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#42A5F5] via-[#039BE5] to-[#00C6FB] mb-2 animate-gradient-move">{count}+</h4>
+                <p className="text-gray-700 mt-2 font-medium text-xs sm:text-sm md:text-base">{stat.label}</p>
               </div>
             );
           })}

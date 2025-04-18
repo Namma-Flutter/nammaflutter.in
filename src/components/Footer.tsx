@@ -30,22 +30,22 @@ const Footer = () => {
         <img src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern background" />
       </div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row md:justify-between gap-8 mb-8 items-center">
-          <div className="flex flex-col items-center md:items-start">
-            <img src="/flutter-logo.svg" alt="Flutter Logo" className="w-14 h-14 mb-2 drop-shadow" />
-            <h3 className="text-2xl font-extrabold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#42A5F5] via-[#039BE5] to-[#00C6FB]">Namma Flutter</h3>
-            <p className="text-[#039BE5] max-w-xs text-center md:text-left">
+        <div className="flex flex-col md:flex-row md:justify-between gap-8 md:gap-12 mb-8 items-center md:items-start">
+          <div className="flex flex-col items-center md:items-start w-full md:w-auto text-center md:text-left">
+            <img src="/flutter-logo.svg" alt="Flutter Logo" className="w-12 sm:w-14 h-12 sm:h-14 mb-2 drop-shadow" />
+            <h3 className="text-xl sm:text-2xl font-extrabold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#42A5F5] via-[#039BE5] to-[#00C6FB]">Namma Flutter</h3>
+            <p className="text-[#039BE5] max-w-xs text-center md:text-left text-sm sm:text-base">
               Chennai's premier Flutter community, building the future of mobile development.
             </p>
           </div>
-          <div>
-            <h4 className="text-lg font-bold mb-4 text-[#02569B]">Quick Links</h4>
-            <ul className="space-y-2">
+          <div className="w-full md:w-auto flex flex-col items-center md:items-start">
+            <h4 className="text-base sm:text-lg font-bold mb-4 text-[#02569B]">Quick Links</h4>
+            <ul className="space-y-1 sm:space-y-2">
               {links.community.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-[#039BE5] hover:text-[#42A5F5] transition-colors duration-300 font-medium"
+                    className="text-[#039BE5] hover:text-[#42A5F5] transition-colors duration-300 font-medium text-sm sm:text-base"
                   >
                     {link.name}
                   </a>
@@ -53,9 +53,9 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div>
-            <h4 className="text-lg font-bold mb-4 text-[#02569B]">Connect With Us</h4>
-            <div className="flex space-x-4">
+          <div className="w-full md:w-auto flex flex-col items-center md:items-start">
+            <h4 className="text-base sm:text-lg font-bold mb-4 text-[#02569B]">Connect With Us</h4>
+            <div className="flex space-x-3 sm:space-x-4">
               {links.social.map((social, index) => (
                 <a
                   key={index}
@@ -82,14 +82,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border-t border-[#42A5F5]/20 pt-8 mt-8">
-          <div className="flex flex-wrap justify-between items-center gap-2">
-            <div className="text-sm text-[#039BE5] font-medium">
+        <div className="border-t border-[#42A5F5]/20 pt-6 sm:pt-8 mt-6 sm:mt-8">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-between items-center gap-2">
+            <div className="text-xs sm:text-sm text-[#039BE5] font-medium">
               {new Date().getFullYear()} Namma Flutter. All rights reserved.
             </div>
-            <div className="flex flex-wrap gap-2 text-sm">
+            <div className="flex flex-wrap gap-1 sm:gap-2 text-xs sm:text-sm">
               {links.tech.map((tech, index) => (
-                <span key={index} className="bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white px-3 py-1 rounded-full font-semibold shadow">
+                <span key={index} className="bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white px-2 sm:px-3 py-1 rounded-full font-semibold shadow">
                   {tech}
                 </span>
               ))}

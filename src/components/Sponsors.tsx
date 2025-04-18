@@ -16,21 +16,21 @@ const Sponsors = () => {
           <span className="text-[#42A5F5] font-semibold uppercase tracking-wider text-sm mb-2">Supported By</span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-2 text-[#02569B] drop-shadow">Our Sponsors</h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
           {sponsors.map((sponsor, index) => (
             <a
               href={sponsor.link}
               target="_blank"
               rel="noopener noreferrer"
               key={index}
-              className="flex flex-col items-center justify-center p-6 bg-white/80 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#B3E5FC] hover:scale-105 group"
+              className="flex flex-col items-center justify-center p-4 sm:p-5 md:p-6 bg-white/80 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#B3E5FC] hover:scale-105 group w-full min-w-0"
             >
               <img
                 src={sponsor.logo}
                 alt={`${sponsor.name} logo`}
-                className="h-14 w-auto object-contain mb-2 group-hover:scale-110 transition-transform duration-300"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain mb-2 group-hover:scale-110 transition-transform duration-300 max-w-[120px] md:max-w-[140px]"
               />
-              <span className="text-[#42A5F5] font-medium text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{sponsor.name}</span>
+              <span className="text-[#42A5F5] font-medium text-xs sm:text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center break-words max-w-[90px] sm:max-w-[110px] md:max-w-[130px]">{sponsor.name}</span>
             </a>
           ))}
         </div>
@@ -50,6 +50,9 @@ const Sponsors = () => {
                     <stop offset="0%" stopColor="#FFF" stopOpacity="0.9" />
                     <stop offset="100%" stopColor="#42A5F5" stopOpacity="0.8" />
                   </radialGradient>
+                  <filter id="shadow" x="-4" y="-4" width="118" height="68" filterUnits="userSpaceOnUse">
+                    <feDropShadow dx="0" dy="2" stdDeviation="2" floodColor="#42A5F5" floodOpacity="0.25"/>
+                  </filter>
                 </defs>
                 <circle cx="16" cy="16" r="14" fill="url(#sponsorGradient)" />
                 <path d="M10 18.5L16 24L22 18.5" stroke="#02569B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

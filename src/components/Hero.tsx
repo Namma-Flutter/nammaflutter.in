@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import Image from "next/image";
 
 const Hero = () => {
   // Import events data
@@ -11,7 +12,7 @@ const Hero = () => {
   const bannerEvent = events.find((event: { type: string; showInBanner: boolean }) => event.type === 'upcoming' && event.showInBanner);
 
   return (
-    <section className="min-h-screen flex flex-col bg-gradient-to-r from-[#E3F2FD] to-[#FFFDE7] relative overflow-hidden">
+    <section className="min-h-[130vh] sm:min-h-[96vh] md:min-h-screen flex flex-col bg-gradient-to-r from-[#E3F2FD] to-[#FFFDE7] relative overflow-hidden">
       {/* Flutter Event Banner */}
       {bannerEvent && (
         <div className="w-full bg-gradient-to-r from-blue-500 via-blue-600 to-cyan-500 text-white py-3 px-6 relative overflow-hidden animate-fadeIn">
@@ -43,10 +44,23 @@ const Hero = () => {
           </div>
         </div>
       )}
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex flex-col md:flex-1 justify-start md:justify-center">
 
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
+        {/* Single Squiggle Arrow between Type Text and Circle - Opposite Direction with Correct Arrowhead */}
+        <div className="absolute left-1/2 top-[54%] md:top-[57%] -translate-x-1/2 z-30 pointer-events-none select-none hidden md:block">
+          <svg width="110" height="60" viewBox="0 0 110 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 15 Q55 60, 10 25" stroke="#02569B" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" filter="url(#shadow)"/>
+            <defs>
+              <filter id="shadow" x="-4" y="-4" width="118" height="68" filterUnits="userSpaceOnUse">
+                <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#42A5F5" flood-opacity="0.25"/>
+              </filter>
+            </defs>
+            <path d="M15 20 L2 25 L12 32" stroke="#02569B" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
         <div className="w-full md:w-1/2">
+          {/* Main Logo Centered in Hero Section */}
           <span className="text-[#42A5F5] text-sm font-semibold mb-4 inline-block uppercase tracking-wider">Flutter Community Event</span>
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-gray-900 pt-2">
             <div className="h-[120px] md:h-[150px] flex items-center justify-center">
@@ -79,7 +93,7 @@ const Hero = () => {
             </button>
           </a>
 
-          <div className="flex gap-12 mt-12">
+          <div className="flex gap-6 md:gap-12 mt-6 md:mt-12">
             <div>
               <h3 className="text-2xl font-bold text-[#02569B]">500+</h3>
               <p className="text-gray-600">Attendees</p>
@@ -95,19 +109,11 @@ const Hero = () => {
           </div>
         </div>
         {/* Decorative Elements */}
-        <div className="absolute top-12 left-12 animate-bounce">
+        <div className="absolute top-12 left-12 animate-bounce hidden sm:block">
           <span className="text-[#42A5F5] text-4xl">✧</span>
         </div>
-        <div className="absolute bottom-12 right-1/4 animate-spin-slow">
+        <div className="absolute bottom-12 right-1/4 animate-spin-slow hidden sm:block">
           <span className="text-[#42A5F5] text-4xl">✦</span>
-        </div>
-
-        {/* Curved Arrow */}
-        <div className="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-24 h-24 md:block hidden">
-          <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-            <path d="M20 50C20 50 40 30 50 50C60 70 80 50 80 50" stroke="#42A5F5" strokeWidth="2" strokeLinecap="round"/>
-            <path d="M75 45L80 50L75 55" stroke="#42A5F5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
         </div>
 
         {/* Right Content - Circular Image */}
@@ -134,7 +140,7 @@ const Hero = () => {
             </div>
 
             {/* NEW! Tag */}
-            <div className="absolute left-0 bottom-1/3 transform -translate-x-1/2 rotate-[-15deg]">
+            <div className="absolute left-1 bottom-[28%] transform -translate-x-1/2 rotate-[-15deg]">
               <div className="bg-[#42A5F5] text-white px-4 py-1 rounded-full text-sm font-bold shadow-md">
                 COMMUNITY
               </div>
@@ -144,6 +150,26 @@ const Hero = () => {
             <div className="absolute top-8 left-8 bg-white py-2 px-4 rounded-full shadow-lg flex items-center gap-2 border border-[#42A5F5]">
               <span>🤝</span>
               <span className="font-medium text-[#02569B]">Networking</span>
+            </div>
+
+            {/* Small Chennai/Flutter icons for extra fancy look - now arranged just outside the circle, larger and visible */}
+            <div className="absolute inset-0 pointer-events-none select-none z-20">
+              {/* Top left outside circle */}
+              <Image src="/logos/lighthouse.png" alt="Chennai Lighthouse" width={18} height={18} priority
+                className="absolute left-[-10%] top-[8%] w-4 xs:w-5 sm:w-6 md:w-8 lg:w-10 animate-bounce-slow"
+                style={{maxWidth:'100%',maxHeight:'100%'}} />
+              {/* Top right outside circle */}
+              <Image src="/logos/lic.png" alt="LIC Building" width={20} height={20} priority
+                className="absolute right-[-10%] top-[12%] w-5 xs:w-6 sm:w-7 md:w-10 lg:w-12 animate-float-slow"
+                style={{maxWidth:'100%',maxHeight:'100%'}} />
+              {/* Bottom left outside circle */}
+              <Image src="/logos/temple.png" alt="Chennai Temple" width={18} height={18} priority
+                className="absolute left-[-8%] bottom-[12%] w-4 xs:w-5 sm:w-6 md:w-8 lg:w-10 animate-float"
+                style={{maxWidth:'100%',maxHeight:'100%'}} />
+              {/* Bottom right outside circle */}
+              <Image src="/logos/bird.png" alt="Flutter Mascot Small" width={18} height={18} priority
+                className="absolute right-[-8%] bottom-[10%] w-4 xs:w-5 sm:w-6 md:w-8 lg:w-10 animate-bounce"
+                style={{maxWidth:'100%',maxHeight:'100%'}} />
             </div>
           </div>
         </div>

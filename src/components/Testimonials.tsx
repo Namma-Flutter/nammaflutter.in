@@ -18,22 +18,22 @@ const Testimonials = () => {
           <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#42A5F5] via-[#039BE5] to-[#00C6FB] drop-shadow-lg">{testimonialData.title}</h2>
         </div>
         <Marquee gradient={false} speed={40} pauseOnHover={true} className="py-2">
-          <div className="flex gap-8">
+          <div className="flex gap-4 sm:gap-6 md:gap-8">
             {testimonialData.testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-80 p-7 bg-white/90 rounded-2xl shadow-lg border border-[#B3E5FC] hover:shadow-blue-200 transition-all duration-300 hover:scale-105 mx-4 relative group"
+                className="flex-shrink-0 w-64 sm:w-80 p-4 sm:p-7 bg-white/90 rounded-2xl shadow-lg border border-[#B3E5FC] hover:shadow-blue-200 transition-all duration-300 hover:scale-105 mx-2 sm:mx-4 relative group min-w-0"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#42A5F5] to-[#00C6FB] flex items-center justify-center text-2xl text-white font-bold shadow-md">
+                <div className="flex items-center gap-2 sm:gap-3 mb-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#42A5F5] to-[#00C6FB] flex items-center justify-center text-xl sm:text-2xl text-white font-bold shadow-md">
                     <span role="img" aria-label="User">👤</span>
                   </div>
                   <div className="text-left">
-                    <p className="font-bold text-[#02569B]">{testimonial.name}</p>
-                    <p className="text-[#039BE5] text-xs font-medium">{testimonial.role}</p>
+                    <p className="font-bold text-[#02569B] text-xs sm:text-base">{testimonial.name}</p>
+                    <p className="text-[#039BE5] text-[10px] sm:text-xs font-medium">{testimonial.role}</p>
                   </div>
                 </div>
-                <p className="text-lg text-gray-700 mb-2 italic">“{testimonial.text}”</p>
+                <p className="text-base sm:text-lg text-gray-700 mb-2 italic">“{testimonial.text}”</p>
               </div>
             ))}
           </div>

@@ -61,41 +61,41 @@ const Events = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
           {filteredEvents.map((event, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className={`group relative overflow-hidden rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-105 border-2 border-[#B3E5FC] ${event.type === 'upcoming' ? 'bg-white/90' : 'bg-white/70'}`}
+              className={`group relative overflow-hidden rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-105 border-2 border-[#B3E5FC] ${event.type === 'upcoming' ? 'bg-white/90' : 'bg-white/70'} min-w-0 w-full`}
             >
               <div className="absolute inset-0 bg-gradient-to-b from-[#42A5F5]/10 via-[#039BE5]/20 to-[#00C6FB]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="p-8 relative z-10">
-                <div className="flex justify-between items-start mb-6">
-                  <h3 className="text-2xl font-bold text-[#02569B] group-hover:text-[#039BE5] transition-colors duration-300">{event.title}</h3>
+              <div className="p-6 sm:p-8 relative z-10">
+                <div className="flex flex-col sm:flex-row justify-between items-start mb-4 sm:mb-6 gap-2">
+                  <h3 className="text-lg sm:text-2xl font-bold text-[#02569B] group-hover:text-[#039BE5] transition-colors duration-300">{event.title}</h3>
                   <span
-                    className={`px-4 py-1 rounded-full text-sm font-bold shadow ${event.type === 'upcoming' ? 'bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white' : 'bg-gray-400 text-white'}`}
+                    className={`px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-bold shadow ${event.type === 'upcoming' ? 'bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white' : 'bg-gray-400 text-white'}`}
                   >
                     {event.type === 'upcoming' ? 'Upcoming' : 'Past'}
                   </span>
                 </div>
-                <p className="text-gray-700 mb-8 line-clamp-2 group-hover:text-[#02569B] transition-colors duration-300">{event.description}</p>
-                <div className="flex flex-wrap gap-6 text-sm text-[#039BE5] group-hover:text-[#02569B] transition-colors duration-300">
-                  <span className="flex items-center gap-2">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <p className="text-gray-700 mb-4 sm:mb-8 line-clamp-2 group-hover:text-[#02569B] transition-colors duration-300 text-sm sm:text-base">{event.description}</p>
+                <div className="flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm text-[#039BE5] group-hover:text-[#02569B] transition-colors duration-300">
+                  <span className="flex items-center gap-1 sm:gap-2">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     {event.date}
                   </span>
-                  <span className="flex items-center gap-2">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="flex items-center gap-1 sm:gap-2">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     {event.time}
                   </span>
-                  <span className="flex items-center gap-2">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="flex items-center gap-1 sm:gap-2">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
@@ -106,9 +106,9 @@ const Events = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="mt-8 w-full bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white px-8 py-4 rounded-xl font-bold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 group-hover:bg-white group-hover:text-[#039BE5] border-2 border-transparent group-hover:border-[#42A5F5]"
+                    className="mt-6 sm:mt-8 w-full bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 group-hover:bg-white group-hover:text-[#039BE5] border-2 border-transparent group-hover:border-[#42A5F5] text-sm sm:text-base"
                   >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
                     Register Now
