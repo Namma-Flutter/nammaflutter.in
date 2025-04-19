@@ -5,7 +5,7 @@ import gameData from '../../data/game.json';
 
 const GameSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-[#E3F2FD] via-[#FFFDE7] to-[#B3E5FC] relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       {/* Flutter pattern background */}
       <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
         <img src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern background" />
@@ -14,7 +14,7 @@ const GameSection = () => {
         <div className="flex flex-col items-center mb-8">
           <img src="/flutter-logo.svg" alt="Flutter Logo" className="w-14 h-14 mb-2 drop-shadow" />
           <span className="text-[#42A5F5] font-semibold uppercase tracking-wider text-sm mb-2">Fun & Games</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#42A5F5] via-[#039BE5] to-[#00C6FB] drop-shadow-lg">{gameData.title}</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-2 text-[#02569B] drop-shadow">{gameData.title}</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
           {gameData.games.map((game, index) => (

@@ -10,13 +10,36 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Hero />
-      <Sponsors />
-      <AboutUs />
-      <Teams />
-      <Testimonials />
-      <Events />
-      <GameSection />
+      <section id="home">
+        <Hero />
+      </section>
+      <section id="sponsors">
+        <Sponsors />
+      </section>
+      <section id="about">
+        <AboutUs />
+      </section>
+      <section id="teams">
+        <Teams />
+      </section>
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+      <section id="events">
+        <Events />
+      </section>
+      <section id="games">
+        <GameSection />
+      </section>
+      <section id="blogs">
+        {/* Add your Blogs component here if available */}
+      </section>
+      <section id="projects">
+        {/* Add your Projects component here if available */}
+      </section>
+      <section id="story">
+        {/* Add your Story component here if available */}
+      </section>
       <Footer />
     </main>
   );

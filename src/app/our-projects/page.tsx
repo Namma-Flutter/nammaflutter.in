@@ -35,7 +35,7 @@ export default async function OurProjectsPage() {
               </p>
               <a
                 href={`/our-projects/${project.slug}`}
-                className="mt-auto inline-block bg-gradient-to-r from-[#039BE5] to-[#B3E5FC] text-white font-semibold py-2 px-5 rounded-lg shadow hover:from-[#01579B] hover:to-[#81D4FA] hover:scale-105 transition-all duration-200 z-10"
+                className="mt-auto inline-block bg-[#039BE5] text-white font-semibold py-2 px-5 rounded-lg shadow hover:bg-[#01579B] hover:scale-105 transition-all duration-200 z-10"
               >
                 View Project
               </a>

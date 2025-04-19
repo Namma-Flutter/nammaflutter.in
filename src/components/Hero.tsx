@@ -3,6 +3,7 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Image from "next/image";
+import Navbar from './Navbar';
 
 const Hero = () => {
   // Import events data
@@ -12,7 +13,8 @@ const Hero = () => {
   const bannerEvent = events.find((event: { type: string; showInBanner: boolean }) => event.type === 'upcoming' && event.showInBanner);
 
   return (
-    <section className="min-h-[130vh] sm:min-h-[96vh] md:min-h-screen flex flex-col bg-gradient-to-r from-[#E3F2FD] to-[#FFFDE7] relative overflow-hidden">
+    <section className="min-h-[130vh] sm:min-h-[96vh] md:min-h-screen flex flex-col relative overflow-hidden">
+      <Navbar />
       {/* Flutter Event Banner */}
       {bannerEvent && (
         <div className="w-full bg-gradient-to-r from-blue-500 via-blue-600 to-cyan-500 text-white py-3 px-6 relative overflow-hidden animate-fadeIn">
@@ -47,18 +49,7 @@ const Hero = () => {
       <div className="flex flex-col md:flex-1 justify-start md:justify-center">
 
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
-        {/* Single Squiggle Arrow between Type Text and Circle - Opposite Direction with Correct Arrowhead */}
-        <div className="absolute left-1/2 top-[54%] md:top-[57%] -translate-x-1/2 z-30 pointer-events-none select-none hidden md:block">
-          <svg width="110" height="60" viewBox="0 0 110 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 15 Q55 60, 10 25" stroke="#02569B" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" filter="url(#shadow)"/>
-            <defs>
-              <filter id="shadow" x="-4" y="-4" width="118" height="68" filterUnits="userSpaceOnUse">
-                <feDropShadow dx="0" dy="2" stdDeviation="2" floodColor="#42A5F5" floodOpacity="0.25"/>
-              </filter>
-            </defs>
-            <path d="M15 20 L2 25 L12 32" stroke="#02569B" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </div>
+
         <div className="w-full md:w-1/2">
           {/* Main Logo Centered in Hero Section */}
           <span className="text-[#42A5F5] text-sm font-semibold mb-4 inline-block uppercase tracking-wider">Flutter Community Event</span>
@@ -92,11 +83,11 @@ const Hero = () => {
               <span>Join the Event</span>
             </button>
           </a>
-          <div className="flex flex-wrap gap-2 mt-8">
+          {/* <div className="flex flex-wrap gap-2 mt-8">
             <a href="/our-story" className="bg-[#42A5F5]/80 text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-[#02569B] hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#02569B]">Our Story</a>
             <a href="/our-blogs" className="bg-[#42A5F5]/80 text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-[#02569B] hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#02569B]">Our Blogs</a>
             <a href="/our-projects" className="bg-[#42A5F5]/80 text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-[#02569B] hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#02569B]">Our Projects</a>
-          </div>
+          </div> */}
 
           <div className="flex gap-6 md:gap-12 mt-6 md:mt-12">
             <div>

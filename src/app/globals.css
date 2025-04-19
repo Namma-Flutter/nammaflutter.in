@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: linear-gradient(120deg, #E3F2FD 0%, #FFFDE7 50%, #B3E5FC 100%);
+  --background: #fff;
   --foreground: #171717;
   --flutter-glass: rgba(255,255,255,0.85);
   --flutter-glass-dark: rgba(27,31,35,0.8);
@@ -16,20 +16,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: linear-gradient(120deg, #0a0a0a 0%, #1B1F23 100%);
+    --background: #fff;
     --foreground: #ededed;
     --flutter-glass: rgba(27,31,35,0.85);
     --flutter-glass-dark: rgba(10,10,10,0.7);
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
+  background: linear-gradient(120deg, #E3F2FD 0%, #FFFDE7 50%, #B3E5FC 100%);
   color: var(--foreground);
   font-family: 'Geist', 'Inter', Arial, Helvetica, sans-serif;
   min-height: 100vh;
-  background-attachment: fixed;
-  background-size: cover;
+  background-attachment: unset;
+  background-size: unset;
 }
 
 /* Glassmorphism utility */
@@ -52,9 +56,9 @@ body {
   position: absolute;
   inset: -2px;
   z-index: 0;
-  background: linear-gradient(120deg, #02569B, #42A5F5, #00C6FB, #13B9FD, #7B61FF, #FFD600, #02569B);
-  background-size: 200% 200%;
-  animation: flutterGradientMove 4s linear infinite;
+  /* background: linear-gradient(120deg, #02569B, #42A5F5, #00C6FB, #13B9FD, #7B61FF, #FFD600, #02569B); */
+  /* background-size: 200% 200%; */
+  /* animation: flutterGradientMove 4s linear infinite; */
   border-radius: inherit;
 }
 .flutter-animated-border > * {
@@ -62,9 +66,9 @@ body {
   z-index: 1;
 }
 @keyframes flutterGradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  /* 0% { background-position: 0% 50%; } */
+  /* 50% { background-position: 100% 50%; } */
+  /* 100% { background-position: 0% 50%; } */
 }
 
 /* Flutter logo floating accent (optional utility) */

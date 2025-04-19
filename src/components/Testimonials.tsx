@@ -7,7 +7,7 @@ import testimonialData from '../../data/testimonials.json';
 const Testimonials = () => {
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#E3F2FD] via-[#FFFDE7] to-[#B3E5FC] relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       {/* Flutter pattern background */}
       <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
         <img src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern background" />
@@ -15,7 +15,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center mb-8">
           <img src="/flutter-logo.svg" alt="Flutter Logo" className="w-14 h-14 mb-2 drop-shadow" />
-          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#42A5F5] via-[#039BE5] to-[#00C6FB] drop-shadow-lg">{testimonialData.title}</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-2 text-[#02569B] drop-shadow">{testimonialData.title}</h2>
         </div>
         <Marquee gradient={false} speed={40} pauseOnHover={true} className="py-2">
           <div className="flex gap-4 sm:gap-6 md:gap-8">

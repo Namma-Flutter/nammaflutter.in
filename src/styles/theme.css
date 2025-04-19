@@ -1,23 +1,23 @@
 :root {
-  --color-primary: #FFFFFF;
-  --color-secondary: #1D1D1E;
-  --color-accent: #0DC7FF;
-  --color-accent-light: #C6F3FF;
-  --color-highlight: #FFFAD2;
+  --color-primary: #fff;
+  --color-secondary: #171717;
+  --color-accent: #fff;
+  --color-accent-light: #fff;
+  --color-highlight: #fff;
 }
 
 /* Apply theme colors to base elements */
 body {
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+  background-color: #fff;
+  color: #171717;
 }
 
 /* Utility classes for theme colors */
-.bg-primary { background-color: var(--color-primary); }
-.bg-secondary { background-color: var(--color-secondary); }
-.bg-accent { background-color: var(--color-accent); }
-.bg-accent-light { background-color: var(--color-accent-light); }
-.bg-highlight { background-color: var(--color-highlight); }
+.bg-primary { background-color: #fff; }
+.bg-secondary { background-color: #fff; }
+.bg-accent { background-color: #fff; }
+.bg-accent-light { background-color: #fff; }
+.bg-highlight { background-color: #fff; }
 
 .text-primary { color: var(--color-primary); }
 .text-secondary { color: var(--color-secondary); }

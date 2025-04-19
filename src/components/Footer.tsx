@@ -13,18 +13,11 @@ const Footer = () => {
       { name: 'GitHub', href: 'https://github.com/nammaflutter', icon: 'github' },
       { name: 'LinkedIn', href: 'https://linkedin.com/company/nammaflutter', icon: 'linkedin' },
       { name: 'Discord', href: 'https://discord.gg/nammaflutter', icon: 'discord' }
-    ],
-    tech: [
-      'TypeScript',
-      'Tailwind',
-      'Next.js',
-      'React',
-      'Flutter'
     ]
   };
 
   return (
-    <footer className="bg-gradient-to-tr from-[#E3F2FD] via-[#FFFDE7] to-[#B3E5FC] text-[#02569B] pt-16 pb-10 relative overflow-hidden border-t-4 border-[#42A5F5]/30">
+    <footer className="relative overflow-hidden">
       {/* Flutter pattern background */}
       <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
         <img src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern background" />
@@ -32,8 +25,8 @@ const Footer = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row md:justify-between gap-8 md:gap-12 mb-8 items-center md:items-start">
           <div className="flex flex-col items-center md:items-start w-full md:w-auto text-center md:text-left">
-            <img src="/flutter-logo.svg" alt="Flutter Logo" className="w-12 sm:w-14 h-12 sm:h-14 mb-2 drop-shadow" />
-            <h3 className="text-xl sm:text-2xl font-extrabold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#42A5F5] via-[#039BE5] to-[#00C6FB]">Namma Flutter</h3>
+            <img src="/logos/NammaFlutterTamilLogo.png" alt="Flutter Logo" className="w-60 sm:w-60 h-12 sm:h-14 mb-2 drop-shadow" />
+            {/* <h3 className="text-3xl md:text-4xl font-extrabold mb-2 text-[#02569B] drop-shadow">Namma Flutter</h3> */}
             <p className="text-[#039BE5] max-w-xs text-center md:text-left text-sm sm:text-base">
               Chennai's premier Flutter community, building the future of mobile development.
             </p>
@@ -87,12 +80,15 @@ const Footer = () => {
             <div className="text-xs sm:text-sm text-[#039BE5] font-medium">
               {new Date().getFullYear()} Namma Flutter. All rights reserved.
             </div>
-            <div className="flex flex-wrap gap-1 sm:gap-2 text-xs sm:text-sm">
-              {links.tech.map((tech, index) => (
-                <span key={index} className="bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white px-2 sm:px-3 py-1 rounded-full font-semibold shadow">
-                  {tech}
-                </span>
-              ))}
+            <div className="flex flex-wrap gap-1 sm:gap-2 text-xs sm:text-sm py-2">
+              <a
+                href="https://chennaireact.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-[#42A5F5] to-[#00C6FB] text-white px-2 sm:px-3 py-1 rounded-full font-semibold shadow inline-block hover:scale-105 transition-transform"
+              >
+                Created By Chennai React ❤️
+              </a>
             </div>
           </div>
         </div>

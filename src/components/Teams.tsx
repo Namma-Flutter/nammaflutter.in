@@ -4,7 +4,7 @@ import teamData from '../../data/teams.json';
 const Teams = () => {
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#E3F2FD] via-[#FFFDE7] to-[#B3E5FC] relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       {/* Flutter pattern background */}
       <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
         <img src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern background" />
@@ -15,9 +15,7 @@ const Teams = () => {
           {/* Floating Flutter logo accent */}
           <img src="/flutter-logo.svg" alt="Flutter Accent" className="flutter-float-logo hidden md:block" />
           <span className="text-[#42A5F5] font-semibold uppercase tracking-wider text-sm mb-2">Meet Our Team</span>
-          <h2 className="text-5xl md:text-6xl font-extrabold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#42A5F5] via-[#039BE5] to-[#00C6FB] drop-shadow-lg animate-pulse">
-            {teamData.title}
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-2 text-[#02569B] drop-shadow">{teamData.title}</h2>
           <div className="w-40 h-2 mx-auto bg-gradient-to-r from-[#42A5F5] via-[#00C6FB] to-[#FFD600] rounded-full mb-4 animate-gradient-x"></div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
@@ -75,30 +73,6 @@ const Teams = () => {
               </div>
             </div>
           ))}
-        </div>
-        <div className="mt-16 flex justify-center">
-          <a
-            href="/community"
-            className="inline-flex items-center justify-center bg-gradient-to-r from-[#42A5F5] via-[#039BE5] to-[#00C6FB] text-white px-9 py-3 rounded-full font-semibold shadow-xl hover:shadow-blue-200 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#42A5F5] group relative overflow-hidden"
-            style={{ boxShadow: '0 4px 24px 0 rgba(66,165,245,0.25)' }}
-          >
-            <span className="absolute -inset-px rounded-full animate-gradient-move bg-gradient-to-r from-[#42A5F5] via-[#039BE5] to-[#00C6FB] opacity-40 group-hover:opacity-60 blur-sm z-0" aria-hidden="true"></span>
-            <span className="relative z-10 flex items-center">
-              <svg className="w-7 h-7 mr-2 animate-bounce-slow drop-shadow-md" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <radialGradient id="teamGradient" cx="50%" cy="50%" r="60%">
-                    <stop offset="0%" stopColor="#FFF" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="#42A5F5" stopOpacity="0.8" />
-                  </radialGradient>
-                </defs>
-                <circle cx="16" cy="16" r="14" fill="url(#teamGradient)" />
-                <path d="M10 18.5L16 24L22 18.5" stroke="#02569B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M16 8V24" stroke="#039BE5" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M12 14L16 18L20 14" stroke="#42A5F5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <span className="text-base font-bold tracking-wide bg-gradient-to-r from-white via-[#B3E5FC] to-white bg-clip-text text-transparent">Join Our Team</span>
-            </span>
-          </a>
         </div>
       </div>
     </section>
