@@ -11,6 +11,7 @@ interface Event {
   location: string;
   type: 'upcoming' | 'past';
   description: string;
+  registration_url: string;
 }
 
 interface EventsData {
@@ -27,6 +28,12 @@ const Events = () => {
   const filteredEvents = eventsData.events.filter(event => 
     filter === 'all' ? true : event.type === filter
   );
+
+  const handleClick = (url: string) => {
+    window.open(url)
+  }
+
+
 
   return (
     <section className="py-20 relative overflow-hidden">
@@ -104,6 +111,7 @@ const Events = () => {
                 <div className="flex-1" />
                 {event.type === 'upcoming' && (
                   <motion.button
+                  onClick={handleClick(event.registration_url)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.97 }}
                     className="mt-6 sm:mt-8 w-full bg-[#02569B] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold shadow-lg hover:bg-[#039BE5] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#039BE5] focus:ring-offset-2 transition-all duration-200 flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg tracking-wide group cursor-pointer"

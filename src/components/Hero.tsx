@@ -4,10 +4,11 @@ import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Image from "next/image";
 import Navbar from './Navbar';
+import eventsData from '../../data/events.json';
 
 const Hero = () => {
   // Import events data
-  const events = require('../../data/events.json').events;
+  const events = eventsData.events;
   
   // Find event to show in banner
   const bannerEvent = events.find((event: { type: string; showInBanner: boolean }) => event.type === 'upcoming' && event.showInBanner);
@@ -18,15 +19,12 @@ const Hero = () => {
       {/* Flutter Event Banner */}
       {bannerEvent && (
         <div className="w-full bg-gradient-to-r from-blue-500 via-blue-600 to-cyan-500 text-white py-3 px-6 relative overflow-hidden animate-fadeIn">
-          <div className="absolute inset-0 opacity-10">
-            <img src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern" />
-          </div>
           <div className="container mx-auto flex items-center justify-between gap-4 relative z-10">
             <div className="flex items-center space-x-4">
-              <img src="/flutter-logo.svg" alt="Flutter Logo" className="w-8 h-8" />
               <span className="bg-yellow-300 text-blue-900 px-3 py-1 rounded-full text-sm font-bold shadow-sm">
                 UPCOMING
               </span>
+              <Image src="/flutter-logo.svg" alt="Flutter Logo" className="w-8 h-8" width={8} height={8}/>
               <div className="flex items-center space-x-3">
                 <h3 className="font-bold text-lg text-white">{bannerEvent.title}</h3>
                 <div className="flex items-center space-x-2 text-blue-100">
