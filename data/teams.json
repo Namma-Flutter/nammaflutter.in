@@ -1,35 +1,47 @@
 {
-  "title": "Our Team",
+  "title": "Our Family",
   "members": [
-    {
-      "name": "John Doe",
-      "role": "Community Lead",
-      "image": "/team/john-doe.svg",
-      "social": {
-        "twitter": "https://twitter.com/johndoe",
-        "github": "https://github.com/johndoe",
-        "linkedin": "https://linkedin.com/in/johndoe"
+    [
+      {
+        "name": "Praveen Pandiyan",
+        "role": "Family Member",
+        "image": "https://avatars.githubusercontent.com/u/52589118?v=4"
+      },
+      {
+        "name": "Shiva Prasath R",
+        "role": "Family Member",
+        "image": "https://i.ibb.co/dsg4GTHd/Shiva.jpg"
+      },
+      {
+        "name": "Harish Raj R",
+        "role": "Family Member",
+        "image": "https://i.ibb.co/QFXLjQM9/photo1.jpg"
+      },
+      {
+        "name": "Laksshitha B",
+        "role": "Family Member",
+        "image": "https://i.ibb.co/spKtWV2z/formal-photo.png"
+      },
+      {
+        "name": "Jasim Anwar J S",
+        "role": "Family Member",
+        "image": "https://i.ibb.co/bD16stf/image.jpg"
+      },
+      {
+        "name": "Kumaran Karunakaran",
+        "role": "Family Member",
+        "image": "https://avatars.githubusercontent.com/u/117720053?v=4"
+      },
+      {
+        "name": "Rambo Kamlesh",
+        "role": "Family Member",
+        "image": "https://i.ibb.co/WNvbvD53/Screenshot-2025-04-24-214347.png"
+      },
+      {
+        "name": "Sanju R",
+        "role": "Family Member",
+        "image": "https://i.ibb.co/m5FzdLrf/IMG-20241213-WA0141.jpg"
       }
-    },
-    {
-      "name": "Jane Smith",
-      "role": "Technical Lead",
-      "image": "/team/jane-smith.svg",
-      "social": {
-        "twitter": "https://twitter.com/janesmith",
-        "github": "https://github.com/janesmith",
-        "linkedin": "https://linkedin.com/in/janesmith"
-      }
-    },
-    {
-      "name": "Mike Johnson",
-      "role": "Event Coordinator",
-      "image": "/team/mike-johnson.svg",
-      "social": {
-        "twitter": "https://twitter.com/mikejohnson",
-        "github": "https://github.com/mikejohnson",
-        "linkedin": "https://linkedin.com/in/mikejohnson"
-      }
-    }
+    ]
   ]
 }

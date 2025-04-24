@@ -2,24 +2,54 @@
   "title": "Community Voices",
   "testimonials": [
     {
-      "name": "Priya R.",
-      "role": "Mobile Developer",
-      "text": "Namma Flutter community has been instrumental in my growth as a Flutter developer. The meetups are incredibly informative!"
+      "name": "Keerthivasan V.",
+      "role": "Flutter Developer",
+      "text": "Had an amazing time at Namma Flutter | Flutter Chennai event! ✓Learned a lot about integrating MBaaS (Mobile Backend as a Service) along with Hareesh Rajendran’s insights on Zoho Catalyst and Firebase. Connected with fellow Flutter enthusiasts—can’t wait to apply these insights to my projects! Big thanks to the organizers and speakers."
     },
     {
-      "name": "Karthik S.",
-      "role": "Tech Lead",
-      "text": "The hands-on workshops and collaborative environment make learning Flutter a joy. Proud to be part of this community."
+      "name": "SATHISH WARAN S.",
+      "role": "Flutter Enthusiast",
+      "text": "Hello everyone! Delighted to reflect on the incredible learning journey at the Namma Flutter workshop! From mastering widget libraries to diving deep into state management, every moment boosted my Flutter expertise. Grateful for the opportunity to connect, learn, and grow with fellow enthusiasts. Can’t wait to implement these newfound skills!"
     },
     {
-      "name": "Deepa M.",
-      "role": "Startup Founder",
-      "text": "Found amazing talent and mentorship through Namma Flutter. The community is supportive and welcoming."
+      "name": "Venkateswaran J.",
+      "role": "Mobile Engineer",
+      "text": "Attended an exciting Flutter Chennai meetup at Freshworks organised by Namma Flutter | Flutter Chennai and it was an incredible experience! From interactive networking games to powerful sessions on Augmented Reality, performance tuning, and clean code architecture, the event was packed with insights that left me inspired."
     },
     {
-      "name": "Rahul V.",
-      "role": "Student Developer",
-      "text": "From beginner to confident developer - Namma Flutter made this journey possible with their excellent guidance."
+      "name": "GOKUL K.",
+      "role": "Passionate Flutter Developer",
+      "text": "✨ What an incredible experience at Namma Flutter | Flutter Chennai DevCon! Attending the event on 28.09.2024 was truly one of the most enriching and insightful experiences I've had in my tech journey. From networking bingo to AR/VR sessions and clean architecture deep-dives, every moment was packed with valuable takeaways. A huge thank you to the organising team and speakers for making this unforgettable."
+    },
+    {
+      "name": "Crystal Darling",
+      "role": "Flutter Developer",
+      "text": "Exciting day at Namma Flutter | Flutter Chennai on 21st Dec 2024! Participated in the mini-hackathon, collaborated with great minds, and thrilled to have won a t-shirt in the networking game. Well organised—can’t wait for the next one!"
+    },
+    {
+      "name": "Sahithya B A",
+      "role": "Software Developer @ GUVI",
+      "text": "Weekend well spent! Thrilled to have attended this engaging event hosted by Namma Flutter | Flutter Chennai. It was an incredible learning experience filled with valuable insights and inspiring discussions. Looking forward to more such enriching sessions."
+    },
+    {
+      "name": "Firdous Ismail",
+      "role": "Flutter Developer at Liven - Abacus | Flutter | Android | Figma | Angular",
+      "text": "The meetup was fantastic; I learned a lot. Thanks for the stickers and badges. Excellent effort by you and your team, and I look forward to more meetups like this in the future. Kudos to Namma Flutter!!!"
+    },
+    {
+      "name": "Hareesh Rajendran",
+      "role": "SDE @ Highbrow Technology | Ex Zoho | Dev-tuber",
+      "text": "I felt very happy and satisfied post session. I got a reassurance that I'm on the right path on becoming a \"TECHIE\" which is my dream title. Thanks Namma Flutter | Flutter Chennai Team for the invite. I shared a lot about MBaaS and how it could help any kind of Mobile Developer. This was my first presentation in Tamil, which itself gave another fulfilment."
+    },
+    {
+      "name": "Magesh K",
+      "role": "Mobile Developer at Thiran Technologies",
+      "text": "Hello, People! I just attended the Flutter meetup by Namma Flutter | Flutter Chennai, and it was a fantastic learning experience! Thanks to the organizers and speakers for such an informative event. Excited for future meetups."
+    },
+    {
+      "name": "Bommukkani R",
+      "role": "Senior Android & Flutter Developer at Impiger Technologies",
+      "text": "Recap of Our Recent Flutter Meetup! Yesterday, I attended an enlightening event organized by Namma Flutter | Flutter Chennai. Highlights included state management strategies, MBaaS insights, and widget performance optimizations. A fantastic experience with valuable knowledge shared by all presenters. Looking forward to future meetups!"
     }
   ]
 }

@@ -4,10 +4,11 @@ import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Image from "next/image";
 import Navbar from './Navbar';
+import eventsData from '../../data/events.json';
 
 const Hero = () => {
   // Import events data
-  const events = require('../../data/events.json').events;
+  const events = eventsData.events;
   
   // Find event to show in banner
   const bannerEvent = events.find((event: { type: string; showInBanner: boolean }) => event.type === 'upcoming' && event.showInBanner);
@@ -18,15 +19,12 @@ const Hero = () => {
       {/* Flutter Event Banner */}
       {bannerEvent && (
         <div className="w-full bg-gradient-to-r from-blue-500 via-blue-600 to-cyan-500 text-white py-3 px-6 relative overflow-hidden animate-fadeIn">
-          <div className="absolute inset-0 opacity-10">
-            <img src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern" />
-          </div>
           <div className="container mx-auto flex items-center justify-between gap-4 relative z-10">
             <div className="flex items-center space-x-4">
-              <img src="/flutter-logo.svg" alt="Flutter Logo" className="w-8 h-8" />
               <span className="bg-yellow-300 text-blue-900 px-3 py-1 rounded-full text-sm font-bold shadow-sm">
                 UPCOMING
               </span>
+              <Image src="/flutter-logo.svg" alt="Flutter Logo" className="w-8 h-8" width={8} height={8}/>
               <div className="flex items-center space-x-3">
                 <h3 className="font-bold text-lg text-white">{bannerEvent.title}</h3>
                 <div className="flex items-center space-x-2 text-blue-100">
@@ -57,13 +55,13 @@ const Hero = () => {
             <div className="h-[120px] md:h-[150px] flex items-center justify-center">
               <TypeAnimation
                 sequence={[
-                  'Flutter Chennai Meetup 2024 🚀',
+                  'Namma Flutter | Flutter Chennai🚀',
                   1800,
-                  'Workshops, Talks & Networking 💙',
+                  'Workshops, Talks & Networking💙',
                   1800,
-                  'Grow Your Flutter Skills 🛠️',
+                  'Grow Your Flutter Skills🛠️',
                   1800,
-                  'Connect with the Community 🌏',
+                  'Connect with the Community🌏',
                   1800
                 ]}
                 wrapper="span"
@@ -75,31 +73,25 @@ const Hero = () => {
             </div>
           </h1>
           <p className="text-gray-700 mb-8 max-w-lg text-lg">
-            Join us for an inspiring day of Flutter learning, hands-on workshops, and community networking. Whether you’re a beginner or an expert, there’s something for everyone!
+            Join us for Flutter learning, hands-on workshops, and community networking. Whether you’re a beginner or an expert, there’s something for everyone!
           </p>
           <a href={bannerEvent ? bannerEvent.registration_url : '#'} target="_blank" rel="noopener noreferrer">
             <button className="bg-[#02569B] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#039BE5] transition duration-300 shadow-lg flex items-center gap-2">
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 20.5L17.5 6H21V9.5L6.5 24L3 20.5Z" fill="white"/><path d="M17.5 6L21 2.5V6H17.5Z" fill="#42A5F5"/></svg>
+             
               <span>Join the Event</span>
             </button>
           </a>
-          {/* <div className="flex flex-wrap gap-2 mt-8">
-            <a href="/our-story" className="bg-[#42A5F5]/80 text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-[#02569B] hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#02569B]">Our Story</a>
-            <a href="/our-blogs" className="bg-[#42A5F5]/80 text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-[#02569B] hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#02569B]">Our Blogs</a>
-            <a href="/our-projects" className="bg-[#42A5F5]/80 text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-[#02569B] hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#02569B]">Our Projects</a>
-          </div> */}
-
           <div className="flex gap-6 md:gap-12 mt-6 md:mt-12">
             <div>
-              <h3 className="text-2xl font-bold text-[#02569B]">500+</h3>
-              <p className="text-gray-600">Attendees</p>
+              <h3 className="text-2xl font-bold text-[#02569B]">4000+</h3>
+              <p className="text-gray-600">Community Members</p>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-[#02569B]">12</h3>
+              <h3 className="text-2xl font-bold text-[#02569B]">30+</h3>
               <p className="text-gray-600">Speakers</p>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-[#02569B]">8</h3>
+              <h3 className="text-2xl font-bold text-[#02569B]">12+</h3>
               <p className="text-gray-600">Workshops</p>
             </div>
           </div>

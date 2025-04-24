@@ -1,38 +1,34 @@
 {
-  "title": "About Namma Flutter",
-  "tagline": "Empowering Flutter Development in Chennai",
-  "description": "We are Chennai's premier Flutter community, bringing together developers, designers, and innovators to build the future of mobile applications.",
-  "mission": "To foster excellence in Flutter development through continuous learning, collaboration, and innovation.",
-  "vision": "To be the leading hub for Flutter expertise in South India, driving mobile innovation and developer growth.",
+  "title": "Namma Flutter | Flutter Chennai",
+  "tagline": "Namma Chennai, Namma Flutter",
+  "description": "Namma Flutter is a flutter community based in Chennai, Tamil Nadu, bringing together Flutter developers, designers, and enthusiasts to collaborate, learn, and innovate through meetups, workshops, and hackathons.",
+  "mission": "To share knowledge, foster community engagement, and drive Flutter innovation in Chennai.",
+  "vision": "To empower developers globally with high-quality Flutter content originating from Chennai.",
   "features": [
     {
-      "title": "Learn",
-      "description": "Access curated learning paths, hands-on workshops, and personalized mentorship from industry experts",
-      "icon": "📚"
+      "title": "Workshops & Meetups",
+      "description": "Regular hands-on Flutter workshops, meetups, and hackathons led by experienced community members.",
+      "icon": "🛠️"
     },
     {
-      "title": "Connect",
-      "description": "Join a thriving network of Flutter enthusiasts, share knowledge, and collaborate on innovative projects",
+      "title": "Community Collaboration",
+      "description": "Opportunities to network with thousands of Flutter enthusiasts, collaborate on open-source projects, and engage in peer-to-peer learning.",
       "icon": "🤝"
     },
     {
-      "title": "Grow",
-      "description": "Accelerate your career through practical experience, industry connections, and leadership opportunities",
-      "icon": "🚀"
+      "title": "Knowledge Resources",
+      "description": "Access to curated tutorials, blog posts on Medium, and open-source code repositories on GitHub.",
+      "icon": "📖"
     }
   ],
   "stats": [
     {
-      "number": "1000+",
-      "label": "Community Members"
+      "number": "4,230+",
+      "label": "Followers on LinkedIn"
     },
     {
-      "number": "50+",
-      "label": "Events Conducted"
-    },
-    {
-      "number": "100+",
-      "label": "Success Stories"
+      "number": "450+",
+      "label": "Members on Meetup"
     }
   ]
 }

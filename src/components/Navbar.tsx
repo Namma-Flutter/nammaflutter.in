@@ -4,13 +4,13 @@ const NAV_LINKS = [
   { name: 'Home', href: '#home' },
   // { name: 'Sponsors', href: '#sponsors' },
   // { name: 'About', href: '#about' },
-  // { name: 'Teams', href: '#teams' },
+  { name: 'Family', href: '#teams' },
   // { name: 'Testimonials', href: '#testimonials' },
   { name: 'Events', href: '#events' },
   // { name: 'Games', href: '#games' },
-  { name: 'Blogs', href: '/our-blogs' },
-  { name: 'Projects', href: '/our-projects' },
-  { name: 'Story', href: '/our-story' },
+  // { name: 'Blogs', href: '/our-blogs' },
+  // { name: 'Projects', href: '/our-projects' },
+  // { name: 'Story', href: '/our-story' },
   // { name: 'Contact', href: '#footer' },
 ];
 
