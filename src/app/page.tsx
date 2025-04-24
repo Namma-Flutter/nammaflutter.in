@@ -6,6 +6,7 @@ import Events from "@/components/Events";
 import GameSection from "@/components/GameSection";
 import Teams from "@/components/Teams";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
         {/* Add your Story component here if available */}
       </section>
       <Footer />
+      <Toaster />
     </main>
   );
 }
