@@ -1,35 +1,11 @@
 {
-  "title": "Our Team",
+  "title": "Our Family",
   "members": [
     {
-      "name": "John Doe",
-      "role": "Community Lead",
-      "image": "/team/john-doe.svg",
-      "social": {
-        "twitter": "https://twitter.com/johndoe",
-        "github": "https://github.com/johndoe",
-        "linkedin": "https://linkedin.com/in/johndoe"
-      }
-    },
-    {
-      "name": "Jane Smith",
-      "role": "Technical Lead",
-      "image": "/team/jane-smith.svg",
-      "social": {
-        "twitter": "https://twitter.com/janesmith",
-        "github": "https://github.com/janesmith",
-        "linkedin": "https://linkedin.com/in/janesmith"
-      }
-    },
-    {
-      "name": "Mike Johnson",
-      "role": "Event Coordinator",
-      "image": "/team/mike-johnson.svg",
-      "social": {
-        "twitter": "https://twitter.com/mikejohnson",
-        "github": "https://github.com/mikejohnson",
-        "linkedin": "https://linkedin.com/in/mikejohnson"
-      }
+      "name": "Praveen Pandiyan",
+      "role": "Family Member",
+      "image": "https://avatars.githubusercontent.com/u/52589118?v=4"
     }
+    
   ]
 }

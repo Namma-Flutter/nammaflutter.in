@@ -23,17 +23,24 @@ const Events = () => {
   const [eventsData] = useState<EventsData | null>(EventsJson as EventsData | null);
   const [filter, setFilter] = useState<'all' | 'upcoming' | 'past'>('all');
 
-  if (!eventsData) return null;
+  // State to ensure the code only runs on the client side
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Set to true when mounted on the client side
+  }, []);
+
+  if (!eventsData || !isClient) return null;
 
   const filteredEvents = eventsData.events.filter(event => 
     filter === 'all' ? true : event.type === filter
   );
 
   const handleClick = (url: string) => {
-    window.open(url)
-  }
-
-
+    if (url && typeof window !== 'undefined') {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  };
 
   return (
     <section className="py-20 relative overflow-hidden">
@@ -111,7 +118,7 @@ const Events = () => {
                 <div className="flex-1" />
                 {event.type === 'upcoming' && (
                   <motion.button
-                  onClick={handleClick(event.registration_url)}
+                    onClick={() => handleClick(event.registration_url)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.97 }}
                     className="mt-6 sm:mt-8 w-full bg-[#02569B] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold shadow-lg hover:bg-[#039BE5] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#039BE5] focus:ring-offset-2 transition-all duration-200 flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg tracking-wide group cursor-pointer"

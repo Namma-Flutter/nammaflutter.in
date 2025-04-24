@@ -28,9 +28,9 @@ export default function Home() {
       <section id="events">
         <Events />
       </section>
-      <section id="games">
+      {/* <section id="games">
         <GameSection />
-      </section>
+      </section> */}
       <section id="blogs">
         {/* Add your Blogs component here if available */}
       </section>
