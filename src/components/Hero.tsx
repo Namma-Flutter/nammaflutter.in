@@ -97,10 +97,10 @@ const Hero = () => {
           </div>
         </div>
         {/* Decorative Elements */}
-        <div className="absolute top-12 left-12 animate-bounce hidden sm:block">
+        <div className="absolute top-12 left-12 animate-bounce hidden xl:block">
           <span className="text-[#42A5F5] text-4xl">✧</span>
         </div>
-        <div className="absolute bottom-12 right-1/4 animate-spin-slow hidden sm:block">
+        <div className="absolute bottom-12 right-1/4 animate-spin-slow hidden xl:block">
           <span className="text-[#42A5F5] text-4xl">✦</span>
         </div>
 
