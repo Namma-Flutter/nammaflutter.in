@@ -3,7 +3,6 @@ import Sponsors from "@/components/Sponsors";
 import AboutUs from "@/components/AboutUs";
 import Testimonials from "@/components/Testimonials";
 import Events from "@/components/Events";
-import GameSection from "@/components/GameSection";
 import Teams from "@/components/Teams";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Footer = () => {
   const links = {
@@ -20,12 +21,12 @@ const Footer = () => {
     <footer className="relative overflow-hidden">
       {/* Flutter pattern background */}
       <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
-        <img src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern background" />
+        <Image width={100} height={100} src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern background" />
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row md:justify-between gap-8 md:gap-12 mb-8 items-center md:items-start">
           <div className="flex flex-col items-center md:items-start w-full md:w-auto text-center md:text-left">
-            <img src="/logos/NammaFlutterTamilLogo.png" alt="Flutter Logo" className="w-60 sm:w-60 h-12 sm:h-14 mb-2 drop-shadow" />
+            <Image width={100} height={100} src="/logos/NammaFlutterTamilLogo.png" alt="Flutter Logo" className="w-60 sm:w-60 h-12 sm:h-14 mb-2 drop-shadow" />
             {/* <h3 className="text-3xl md:text-4xl font-extrabold mb-2 text-[#02569B] drop-shadow">Namma Flutter</h3> */}
             <p className="text-[#039BE5] max-w-xs text-center md:text-left text-sm sm:text-base">
               Chennais premier Flutter community, building the future of mobile development.
