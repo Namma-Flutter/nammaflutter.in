@@ -28,7 +28,7 @@ const Footer = () => {
             <img src="/logos/NammaFlutterTamilLogo.png" alt="Flutter Logo" className="w-60 sm:w-60 h-12 sm:h-14 mb-2 drop-shadow" />
             {/* <h3 className="text-3xl md:text-4xl font-extrabold mb-2 text-[#02569B] drop-shadow">Namma Flutter</h3> */}
             <p className="text-[#039BE5] max-w-xs text-center md:text-left text-sm sm:text-base">
-              Chennai's premier Flutter community, building the future of mobile development.
+              Chennais premier Flutter community, building the future of mobile development.
             </p>
           </div>
           <div className="w-full md:w-auto flex flex-col items-center md:items-start">
