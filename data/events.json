@@ -1,0 +1,118 @@
+{
+  "title": "NammaFlutter Events",
+  "subtitle": "Join us for Chennai’s most vibrant Flutter meetups and workshops",
+  "events": [
+    {
+      "title": "1st Year Anniversary powered by Zoho Apptics",
+      "date": "2025-04-26",
+      "time": "9:00 AM",
+      "location": "Entrans Technologies Private Limited",
+      "type": "upcoming",
+      "description": "Celebrating one year of Flutter excellence in Chennai! Expect keynote sessions, community talks, swags, and surprises.",
+      "tags": ["anniversary", "meetup", "celebration"],
+      "capacity": 200,
+      "price": "Free",
+      "showInBanner": true,
+      "registration_url": "https://lu.ma/8v6t725c"
+    },
+    {
+      "title": "NammaFlutter Annual Beginner Flutter Workshop",
+      "date": "2024-09-15",
+      "time": "9:00 AM",
+      "location": "Gmeet",
+      "type": "past",
+      "description": "Hands-on workshop for Flutter beginners to build their first application and learn core concepts.",
+      "tags": ["workshop", "beginner", "hands-on"]
+    },
+    {
+      "title": "Mini Hackathon",
+      "date": "2024-12-08",
+      "time": "9:00 AM",
+      "location": "Thiran Technologies Private Limited",
+      "type": "past",
+      "description": "A one-day Flutter hackathon to build quick mobile prototypes with real-world impact.",
+      "tags": ["hackathon", "team", "challenge"]
+    },
+    {
+      "title": "November Meetup",
+      "date": "2024-11-09",
+      "time": "9:00 AM",
+      "location": "Ticel Bio Park, Yuniq",
+      "type": "past",
+      "description": "Monthly meetup with speaker sessions, networking and live Flutter demos.",
+      "tags": ["meetup", "networking", "demos"]
+    },
+    {
+      "title": "Namma Flutter Dev-con",
+      "date": "2024-09-14",
+      "time": "2:00 PM",
+      "location": "Freshworks",
+      "type": "past",
+      "description": "A developer conference focused on real-world Flutter architecture and enterprise app design.",
+      "tags": ["conference", "architecture", "enterprise"]
+    },
+    {
+      "title": "August Online Meetup",
+      "date": "2024-08-24",
+      "time": "10:00 AM",
+      "location": "Online",
+      "type": "past",
+      "description": "Remote community meetup with talks and Q&A on Flutter best practices.",
+      "tags": ["online", "meetup", "community"]
+    },
+    {
+      "title": "Namma Flutter - July Meetup",
+      "date": "2024-07-27",
+      "time": "9:00 AM",
+      "location": "PickYourTrails",
+      "type": "past",
+      "description": "Live coding, performance tips, and Flutter animations demo from the community.",
+      "tags": ["performance", "animations", "coding"]
+    },
+    {
+      "title": "CodeSapiens Summer of Code X NammaFlutter",
+      "date": "2024-07-07",
+      "time": "10:00 AM",
+      "location": "Online",
+      "type": "past",
+      "description": "Mentorship collaboration on Flutter projects with students and open-source enthusiasts.",
+      "tags": ["mentorship", "open-source", "collaboration"]
+    },
+    {
+      "title": "Flutter Chennai – June Meetup",
+      "date": "2024-06-15",
+      "time": "9:00 AM",
+      "location": "Thiran Technologies Private Limited",
+      "type": "past",
+      "description": "Interactive session with real-time UI optimizations and project showcases.",
+      "tags": ["ui", "optimization", "showcase"]
+    },
+    {
+      "title": "Flutter Beginner Session",
+      "date": "2024-04-30",
+      "time": "10:00 AM",
+      "location": "Gmeet",
+      "type": "past",
+      "description": "Kickstarting Flutter from scratch for complete beginners.",
+      "tags": ["beginner", "tutorial", "online"]
+    },
+    {
+      "title": "Flutter 1st Meetup",
+      "date": "2024-04-27",
+      "time": "10:00 AM",
+      "location": "Mako IT Lab",
+      "type": "past",
+      "description": "Kickstarting Flutter from scratch for complete beginners.",
+      "tags": ["beginner", "tutorial", "online"]
+    },
+    {
+      "title": "Flutter Introduction Session",
+      "date": "2024-03-16",
+      "time": "9:00 AM",
+      "location": "Gmeet",
+      "type": "past",
+      "description": "The very first community session introducing Flutter and cross-platform mobile development.",
+      "tags": ["intro", "community", "mobile"]
+    }
+  ]
+}

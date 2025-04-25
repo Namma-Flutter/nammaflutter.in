@@ -1,0 +1,29 @@
+{
+  "title": "Flutter Games Gallery",
+  "games": [
+    {
+      "title": "Flutter UI Builder",
+      "description": "Build and customize Flutter UI components in real-time",
+      "image": "/games/ui-builder.svg",
+      "link": "https://flutterbuilder.dev"
+    },
+    {
+      "title": "Flutter Animation Demo",
+      "description": "Explore Flutter's powerful animation capabilities",
+      "image": "/games/animation-demo.svg",
+      "link": "https://flutteranimations.dev"
+    },
+    {
+      "title": "Flutter State Management",
+      "description": "Learn state management with interactive examples",
+      "image": "/games/state-demo.svg",
+      "link": "https://flutterstate.dev"
+    },
+    {
+      "title": "Flutter Widget Workshop",
+      "description": "Practice building various Flutter widgets",
+      "image": "/games/widget-workshop.svg",
+      "link": "https://flutterwidgets.dev"
+    }
+  ]
+}

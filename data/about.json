@@ -1,0 +1,34 @@
+{
+  "title": "Namma Flutter | Flutter Chennai",
+  "tagline": "Namma Chennai, Namma Flutter",
+  "description": "Namma Flutter is a flutter community based in Chennai, Tamil Nadu, bringing together Flutter developers, designers, and enthusiasts to collaborate, learn, and innovate through meetups, workshops, and hackathons.",
+  "mission": "To share knowledge, foster community engagement, and drive Flutter innovation in Chennai.",
+  "vision": "To empower developers globally with high-quality Flutter content originating from Chennai.",
+  "features": [
+    {
+      "title": "Workshops & Meetups",
+      "description": "Regular hands-on Flutter workshops, meetups, and hackathons led by experienced community members.",
+      "icon": "🛠️"
+    },
+    {
+      "title": "Community Collaboration",
+      "description": "Opportunities to network with thousands of Flutter enthusiasts, collaborate on open-source projects, and engage in peer-to-peer learning.",
+      "icon": "🤝"
+    },
+    {
+      "title": "Knowledge Resources",
+      "description": "Access to curated tutorials, blog posts on Medium, and open-source code repositories on GitHub.",
+      "icon": "📖"
+    }
+  ],
+  "stats": [
+    {
+      "number": "4,230+",
+      "label": "Followers on LinkedIn"
+    },
+    {
+      "number": "450+",
+      "label": "Members on Meetup"
+    }
+  ]
+}
