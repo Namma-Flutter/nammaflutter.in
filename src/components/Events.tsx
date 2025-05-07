@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import EventsJson from '../../data/events.json';
+import Image from 'next/image';
 
 interface Event {
   title: string;
@@ -46,11 +47,11 @@ const Events = () => {
     <section className="py-20 relative overflow-hidden">
       {/* Flutter pattern background */}
       <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
-        <img src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern background" />
+        <Image width={100} height={100} src="/flutter-pattern.svg" className="w-full h-full object-cover" alt="Flutter pattern background" />
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center mb-8">
-          <img src="/flutter-logo.svg" alt="Flutter Logo" className="w-14 h-14 mb-2 drop-shadow" />
+          <Image width={100} height={100} src="/flutter-logo.svg" alt="Flutter Logo" className="w-14 h-14 mb-2 drop-shadow" />
           <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-2 text-[#02569B] drop-shadow">{eventsData.title}</h2>
           <p className="text-md text-gray-700 mb-6">Join us for exciting Flutter events and workshops</p>
           <div className="flex justify-center gap-4 mt-4">

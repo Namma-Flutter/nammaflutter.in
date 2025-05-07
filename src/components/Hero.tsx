@@ -7,10 +7,22 @@ import Navbar from "./Navbar";
 import eventsData from "../../data/events.json";
 
 const Hero = () => {
-  const events = eventsData.events;
+  const events: Array<{
+    title: string;
+    date: string;
+    time: string;
+    location: string;
+    type: string;
+    description: string;
+    tags: string[];
+    capacity?: number;
+    price?: string;
+    showInBanner?: boolean;
+    registration_url?: string;
+  }> = eventsData.events;
   const bannerEvent = events.find(
-    (event: { type: string; showInBanner: boolean }) =>
-      event.type === "upcoming" && event.showInBanner
+    (event) =>
+      event.type === "upcoming" && event.showInBanner === true
   );
 
   return (
