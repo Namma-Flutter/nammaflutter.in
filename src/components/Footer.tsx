@@ -11,7 +11,7 @@ const Footer = () => {
     ],
     social: [
       { name: 'Twitter', href: 'https://twitter.com/nammaflutter', icon: 'twitter' },
-      { name: 'GitHub', href: 'https://github.com/nammaflutter', icon: 'github' },
+      { name: 'GitHub', href: 'https://github.com/Namma-Flutter', icon: 'github' },
       { name: 'LinkedIn', href: 'https://linkedin.com/company/nammaflutter', icon: 'linkedin' },
       { name: 'Discord', href: 'https://t.me/nammaflutter', icon: 'telegram' }
     ]
