@@ -3,6 +3,19 @@
   "subtitle": "Join us for Chennai’s most vibrant Flutter meetups and workshops",
   "events": [
     {
+      "title": "Flutter Chennai – June Meetup",
+      "date": "2025-06-21",
+      "time": "9:00 AM",
+      "location": "M2P Fintech, Guindy, Chennai",
+      "type": "upcoming",
+      "description": "Join us for our Flutter Chennai June Meetup where it doesnt matter if you A dev? A student? A freelancer ? A Founder ? with or without Flutter Experience. Ellarum Vaanga",
+      "tags": ["june", "meetup", "workshop"],
+      "capacity": 100,
+      "price": "Free",
+      "showInBanner": true,
+      "registration_url": "https://lu.ma/qoqchmc7"
+    },
+    {
       "title": "1st Year Anniversary powered by Zoho Apptics",
       "date": "2025-04-26",
       "time": "9:00 AM",
