@@ -1,0 +1,8 @@
+{
+  "sponsors": [
+    { "name": "Zoho Apptics", "type": "Ultra Dash", "logo": "https://www.zohowebstatic.com/sites/zweb/images/ogimage/apptics-logo.png", "link": "https://www.zoho.com/apptics/" },
+    { "name": "Revenueflo","type": "Dashling", "logo": "https://revenueflo.com/primary_logo_no_bg.svg", "link": "http://revenueflo.com" },
+    { "name": "Doshi","type": "Dashling", "logo": "https://play-lh.googleusercontent.com/XNRPrjpHIl2dXrnq04B9mFHbbww_JELhXMzMA5V-wCaO4ddWdRLZEn_uVYoJN9bYf10", "link": "https://www.doshi.app/" },
+    { "name": "Thiran Technologies","type": "Dashling", "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNFEgIdUHCFzd4Qa_HaV9N7W2sZ-GFnoq8EQ&s", "link": "https://thirantech.com/" }
+  ]
+}

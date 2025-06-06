@@ -1,0 +1,64 @@
+{
+  "title": "Our Family",
+  "members": [
+    [
+      {
+        "name": "Praveen Pandiyan",
+        "role": "Family Member",
+        "image": "https://avatars.githubusercontent.com/u/52589118?v=4"
+      },
+      {
+        "name": "Shiva Prasath R",
+        "role": "Family Member",
+        "image": "https://i.ibb.co/dsg4GTHd/Shiva.jpg"
+      },
+      {
+        "name": "Harish Raj R",
+        "role": "Family Member",
+        "image": "https://i.ibb.co/QFXLjQM9/photo1.jpg"
+      },
+      {
+        "name": "Laksshitha B",
+        "role": "Family Member",
+        "image": "https://i.ibb.co/spKtWV2z/formal-photo.png"
+      },
+      {
+        "name": "Jasim Anwar J S",
+        "role": "Family Member",
+        "image": "https://i.ibb.co/bD16stf/image.jpg"
+      },
+      {
+        "name": "Kumaran Karunakaran",
+        "role": "Family Member",
+        "image": "https://avatars.githubusercontent.com/u/117720053?v=4"
+      },
+      {"name": "Sanju R",
+      "role":"Family Member ",
+      "image":"https://i.ibb.co/m5FzdLrf/IMG-20241213-WA0141.jpg"
+      },
+      {"name": "Vaishnavi G",
+      "role":"Family Member ",
+      "image":"https://media.licdn.com/dms/image/v2/D5603AQFQ-bNiWo1zqQ/profile-displayphoto-shrink_800_800/B56ZXce4SaGoAc-/0/1743160838346?e=1750896000&v=beta&t=LA0tBnpq_b7OsmM8qxvRktRBD3yhO4xaHU9n6UOb91A"
+      },
+      {"name": "Lashika N B",
+      "role":"Family Member ",
+      "image":"https://i.ibb.co/Vhp3DP6/pic.jpg"
+      },
+      {"name": "Santosh A M" ,
+      "role":"Family Member ",
+      "image":"https://media.licdn.com/dms/image/v2/D5603AQEnb-ffgIwTwQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727663226062?e=1750896000&v=beta&t=dpWtFcvQ79xWo9swwSCd-N_DS6i1DMN9aIC3lrJwAFk"
+      },
+      {
+        "name": "Justin Benito",
+        "role": "Family Member",
+        "image": "https://media.licdn.com/dms/image/v2/D5603AQE0I2TGdNOLYg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1674985029817?e=1750896000&v=beta&t=kVC082uQ8G0O0p9KcmbhkvyLTkFirTKKaZEuJP5ECrU"
+      },
+      {
+        "name": "YOU",
+        "role": "Family Member",
+        "image": "https://i.ibb.co/6cxfCp9r/12.webp"      
+      }
+      
+    ]
+  ]
+}

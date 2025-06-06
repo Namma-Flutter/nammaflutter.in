@@ -1,0 +1,9 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="flutter-pattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M25 0L50 25L25 50L0 25L25 0z" fill="#FFFFFF" fill-opacity="0.1"/>
+      <path d="M25 0L50 25L25 50L0 25L25 0z" stroke="#FFFFFF" stroke-opacity="0.2" fill="none"/>
+    </pattern>
+  </defs>
+  <rect width="100" height="100" fill="url(#flutter-pattern)"/>
+</svg>
