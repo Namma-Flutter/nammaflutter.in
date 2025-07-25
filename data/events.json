@@ -1,19 +1,18 @@
 {
   "title": "NammaFlutter Events",
-  "subtitle": "Join us for Chennai’s most vibrant Flutter meetups and workshops",
+  "subtitle": "Join us for Chennai's most vibrant Flutter meetups and workshops",
   "events": [
     {
-      "title": "Flutter Chennai – June Meetup",
-      "date": "2025-06-21",
+      "title": "Flutteristas - July Meetup (Singapengal in Flutter)",
+      "date": "2025-07-26",
       "time": "9:00 AM",
-      "location": "M2P Fintech, Guindy, Chennai",
+      "location": "Mako IT Lab, Taramani, Chennai",
       "type": "upcoming",
-      "description": "Join us for our Flutter Chennai June Meetup where it doesnt matter if you A dev? A student? A freelancer ? A Founder ? with or without Flutter Experience. Ellarum Vaanga",
-      "tags": ["june", "meetup", "workshop"],
-      "capacity": 100,
+      "description": "Empowering women in tech through Flutter - join us in Chennai for a vibrant community event designed to inspire, connect, and uplift!",
+      "tags": ["community", "meetup", "women"],
       "price": "Free",
       "showInBanner": true,
-      "registration_url": "https://lu.ma/qoqchmc7"
+      "registration_url": "https://lu.ma/pe978u26"
     },
     {
       "title": "1st Year Anniversary powered by Zoho Apptics",
@@ -25,7 +24,7 @@
       "tags": ["anniversary", "meetup", "celebration"],
       "capacity": 200,
       "price": "Free",
-      "showInBanner": true,
+      "showInBanner": false,
       "registration_url": "https://lu.ma/8v6t725c"
     },
     {
