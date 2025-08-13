@@ -83,7 +83,7 @@ const Events = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className={`group relative overflow-hidden rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-105 border-2 border-[#B3E5FC] ${event.type === 'upcoming' ? 'bg-white/90' : 'bg-white/70'} min-w-0 w-full h-full min-h-[430px] flex flex-col`}
+              className={`group relative overflow-hidden rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-105 border-2 border-[#B3E5FC] ${event.type === 'upcoming' ? 'bg-white/90 shadow-md hover:shadow-cyan-500/50' : 'bg-white/70'} min-w-0 w-full h-full min-h-[430px] flex flex-col`}
             >
               <div className="p-6 sm:p-8 relative z-10 flex flex-col flex-1">
                 <div className="flex flex-col sm:flex-row justify-between items-start mb-4 sm:mb-6 gap-2">

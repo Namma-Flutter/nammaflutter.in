@@ -1,7 +1,19 @@
 {
   "title": "NammaFlutter Events",
-  "subtitle": "Join us for Chennai’s most vibrant Flutter meetups and workshops",
+  "subtitle": "Join us for Chennai's most vibrant Flutter meetups and workshops",
   "events": [
+    {
+      "title": "Flutteristas - July Meetup (Singapengal in Flutter)",
+      "date": "2025-07-26",
+      "time": "9:00 AM",
+      "location": "Mako IT Lab, Taramani, Chennai",
+      "type": "upcoming",
+      "description": "Empowering women in tech through Flutter - join us in Chennai for a vibrant community event designed to inspire, connect, and uplift!",
+      "tags": ["community", "meetup", "women"],
+      "price": "Free",
+      "showInBanner": true,
+      "registration_url": "https://lu.ma/pe978u26"
+    },
     {
       "title": "1st Year Anniversary powered by Zoho Apptics",
       "date": "2025-04-26",
