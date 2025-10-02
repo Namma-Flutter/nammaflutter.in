@@ -3,11 +3,23 @@
   "subtitle": "Join us for Chennai's most vibrant Flutter meetups and workshops",
   "events": [
     {
+      "title": "FLutter Devcon - Oct 2025",
+      "date": "2025-10-25",
+      "time": "9:00 AM",
+      "location": "TBD",
+      "type": "upcoming",
+      "description": "A developer conference focused on real-world Flutter architecture and enterprise app design.",
+      "tags": ["community", "meetup", "conference"],
+      "price": "Free",
+      "showInBanner": true,
+      "registration_url": ""
+    },
+    {
       "title": "Flutteristas - July Meetup (Singapengal in Flutter)",
       "date": "2025-07-26",
       "time": "9:00 AM",
       "location": "Mako IT Lab, Taramani, Chennai",
-      "type": "upcoming",
+      "type": "past",
       "description": "Empowering women in tech through Flutter - join us in Chennai for a vibrant community event designed to inspire, connect, and uplift!",
       "tags": ["community", "meetup", "women"],
       "price": "Free",
