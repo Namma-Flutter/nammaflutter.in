@@ -16,7 +16,7 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   return (
-    <nav className="w-full flex justify-center absolute top-48 sm:top-36 left-0 z-30">
+    <nav className="w-full flex justify-center relative top-18 sm:top-16 left-0 z-30">
       <ul className="hidden sm:flex bg-gradient-to-r from-[#E3F2FD]/70 via-[#FFFDE7]/60 to-[#B3E5FC]/70 backdrop-blur-md rounded-full shadow-lg border border-gray-200 px-6 py-2 gap-3 md:gap-6 text-sm md:text-base font-semibold text-gray-700 max-w-[98vw] sm:max-w-fit overflow-x-auto">
         {NAV_LINKS.map((link) => (
           <li key={link.name}>
