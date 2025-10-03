@@ -3,7 +3,7 @@
   "subtitle": "Join us for Chennai's most vibrant Flutter meetups and workshops",
   "events": [
     {
-      "title": "FLutter Devcon - Oct 2025",
+      "title": "Namma Devcon - Oct 2025",
       "date": "2025-10-25",
       "time": "9:00 AM",
       "location": "TBD",
@@ -12,7 +12,7 @@
       "tags": ["community", "meetup", "conference"],
       "price": "Free",
       "showInBanner": true,
-      "registration_url": ""
+      "registration_url": "https://lu.ma/ly0opij1"
     },
     {
       "title": "Flutteristas - July Meetup (Singapengal in Flutter)",
