@@ -23,11 +23,11 @@ const Hero = () => {
   const bannerEvent = events.find(
     (event) =>
       event.type === "upcoming" && event.showInBanner === true
+      && Date.parse(event.date) >= Date.now()
   );
 
   return (
     <section className="min-h-[130vh] sm:min-h-[96vh] md:min-h-screen flex flex-col relative overflow-hidden">
-      <Navbar />
 
       {/* Event Banner */}
       {bannerEvent && (
@@ -48,9 +48,10 @@ const Hero = () => {
               </div>
               <h3 className="text-lg sm:text-xl font-semibold">{bannerEvent.title}</h3>
               <div className="flex items-center text-sm text-blue-100">
+                {bannerEvent.date} 
                 <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
+                </svg> 
                 {bannerEvent.time}
               </div>
             </div>
@@ -66,10 +67,10 @@ const Hero = () => {
           </div>
         </div>
       )}
-
+      <Navbar />
       {/* Main Hero Content */}
       <div className="flex-1 px-4 sm:px-6 py-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-        
+
         {/* Left Text Block */}
         <div className="md:w-1/2">
           <span className="text-[#42A5F5] text-xs font-bold uppercase mb-3 block">
