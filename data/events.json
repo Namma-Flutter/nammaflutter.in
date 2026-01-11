@@ -23,7 +23,6 @@
       "description": "Empowering women in tech through Flutter - join us in Chennai for a vibrant community event designed to inspire, connect, and uplift!",
       "tags": ["community", "meetup", "women"],
       "price": "Free",
-      "showInBanner": true,
       "registration_url": "https://lu.ma/pe978u26"
     },
     {
@@ -36,8 +35,20 @@
       "tags": ["anniversary", "meetup", "celebration"],
       "capacity": 200,
       "price": "Free",
-      "showInBanner": false,
       "registration_url": "https://lu.ma/8v6t725c"
+    },
+    {
+      "title": "Namma Madurai Event( FOSSU Madurai x Namma Flutter )",
+      "date": "2025-08-23",
+      "time": "9:00 AM",
+      "location": "Dot com Infoway, Madurai",
+      "type": "upcoming",
+      "description": "Madurai porom gaichs, vara maateengala ? Vandhurunga",
+      "tags": ["madurai", "meetup", "tour"],
+      "capacity": 100,
+      "price": "Free",
+      "showInBanner": true,
+      "registration_url": "https://lu.ma/pw5sh8wn"
     },
     {
       "title": "NammaFlutter Annual Beginner Flutter Workshop",
