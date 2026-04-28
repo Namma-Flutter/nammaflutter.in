@@ -21,7 +21,7 @@ class Header extends StatelessComponent {
 
     return header([
       div(classes: 'header-inner container', [
-        a(href: '/', classes: 'header-logo', [.text('Namma Flutter')]),
+        a(href: '.', classes: 'header-logo', [.text('Namma Flutter')]),
         input(type: InputType.checkbox, id: 'nav-toggle', classes: 'nav-toggle-input'),
         label(
           [
