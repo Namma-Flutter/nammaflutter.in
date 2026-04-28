@@ -42,6 +42,9 @@ jobs:
       - name: Build
         run: jaspr build --verbose
 
+      - name: Create 404 fallback for direct URL access
+        run: cp build/jaspr/index.html build/jaspr/404.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

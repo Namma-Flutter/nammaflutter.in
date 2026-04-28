@@ -21,7 +21,7 @@ class Header extends StatelessComponent {
 
     return header([
       div(classes: 'header-inner container', [
-        a(href: '.', classes: 'header-logo', [.text('Namma Flutter')]),
+        a(href: '/', classes: 'header-logo', [.text('Namma Flutter')]),
         input(type: InputType.checkbox, id: 'nav-toggle', classes: 'nav-toggle-input'),
         label(
           [
@@ -36,7 +36,7 @@ class Header extends StatelessComponent {
         nav(classes: 'header-nav', [
           for (final route in _routes)
             a(
-              href: route.path.substring(1),
+              href: route.path,
               classes: active == route.path ? 'nav-link nav-link-active' : 'nav-link',
               [.text(route.label)],
             ),
