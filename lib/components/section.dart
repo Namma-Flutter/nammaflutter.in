@@ -76,6 +76,8 @@ class Section extends StatelessComponent {
     css.media(MediaQuery.screen(maxWidth: 768.px), [
       css('.section').styles(padding: .symmetric(vertical: 48.px)),
       css('.container').styles(padding: .symmetric(horizontal: 16.px)),
+      css('.section-title').styles(fontSize: 1.6.rem),
+      css('.section-subtitle').styles(fontSize: 1.rem, margin: .only(bottom: 28.px)),
     ]),
   ];
 }

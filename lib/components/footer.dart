@@ -156,5 +156,17 @@ class Footer extends StatelessComponent {
     css('.footer-built-with a:hover').styles(
       opacity: 0.8,
     ),
+    css('.footer-built-with img').styles(
+      width: 106.px,
+      height: 40.px,
+      raw: {'max-width': 'none'},
+    ),
+    css.media(MediaQuery.screen(maxWidth: 640.px), [
+      css('.site-footer').styles(padding: .symmetric(vertical: 40.px)),
+      css('.footer-top').styles(flexDirection: .column, gap: .all(28.px)),
+      css('.footer-brand').styles(maxWidth: 100.percent),
+      css('.footer-links').styles(gap: .all(20.px)),
+      css('.footer-bottom').styles(flexDirection: .column, alignItems: .center, textAlign: .center),
+    ]),
   ];
 }

@@ -91,9 +91,15 @@ class Hero extends StatelessComponent {
     ),
     css('.hero-logo').styles(raw: {'flex-shrink': '0'}),
     css.media(MediaQuery.screen(maxWidth: 768.px), [
-      css('.hero .container').styles(flexDirection: .column),
+      css('.hero').styles(padding: .symmetric(vertical: 64.px)),
+      css('.hero .container').styles(flexDirection: .column, gap: .all(32.px)),
       css('.hero-headline').styles(fontSize: 2.2.rem),
       css('.hero-logo').styles(display: .none),
+    ]),
+    css.media(MediaQuery.screen(maxWidth: 480.px), [
+      css('.hero').styles(padding: .symmetric(vertical: 40.px)),
+      css('.hero-headline').styles(fontSize: 1.8.rem),
+      css('.hero-subtext').styles(fontSize: 1.rem),
     ]),
   ];
 }

@@ -47,5 +47,9 @@ class CtaBand extends StatelessComponent {
       backgroundColor: Colors.white,
       color: primaryColor,
     ),
+    css.media(MediaQuery.screen(maxWidth: 768.px), [
+      css('.cta-band').styles(padding: .symmetric(vertical: 40.px)),
+      css('.cta-band-headline').styles(fontSize: 1.5.rem),
+    ]),
   ];
 }

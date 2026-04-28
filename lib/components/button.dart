@@ -63,9 +63,9 @@ class Button extends StatelessComponent {
     ),
     css('.btn-secondary:hover').styles(backgroundColor: primaryColor, color: Colors.white),
     css('.btn-ghost').styles(
-      backgroundColor: Colors.transparent,
-      color: primaryColor,
       radius: .all(.circular(8.px)),
+      color: primaryColor,
+      backgroundColor: Colors.transparent,
     ),
     css('.btn-ghost:hover').styles(color: primaryColorDark),
   ];

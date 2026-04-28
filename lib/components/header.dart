@@ -22,6 +22,17 @@ class Header extends StatelessComponent {
     return header([
       div(classes: 'header-inner container', [
         a(href: '/', classes: 'header-logo', [.text('Namma Flutter')]),
+        input(type: InputType.checkbox, id: 'nav-toggle', classes: 'nav-toggle-input'),
+        label(
+          [
+            span(classes: 'hamburger-bar', []),
+            span(classes: 'hamburger-bar', []),
+            span(classes: 'hamburger-bar', []),
+          ],
+          htmlFor: 'nav-toggle',
+          classes: 'hamburger',
+          attributes: {'aria-label': 'Toggle navigation'},
+        ),
         nav(classes: 'header-nav', [
           for (final route in _routes)
             a(
@@ -84,11 +95,63 @@ class Header extends StatelessComponent {
       fontWeight: .w700,
       backgroundColor: Color('#E8F2FB'),
     ),
+    css('.nav-toggle-input').styles(display: .none),
+    css('.hamburger').styles(display: .none),
+    css('.hamburger-bar').styles(
+      display: .block,
+      width: 22.px,
+      height: 2.px,
+      backgroundColor: textColor,
+      radius: .all(.circular(2.px)),
+      transition: Transition('all', duration: 250.ms),
+    ),
     css.media(MediaQuery.screen(maxWidth: 768.px), [
       css('.header-nav').styles(gap: .all(2.px)),
       css('.nav-link').styles(
         padding: .symmetric(vertical: 4.px, horizontal: 8.px),
         fontSize: 0.82.rem,
+      ),
+    ]),
+    css.media(MediaQuery.screen(maxWidth: 640.px), [
+      css('.header-inner').styles(
+        flexWrap: .wrap,
+        height: .auto,
+        minHeight: 56.px,
+        gap: .all(0.px),
+        alignItems: .center,
+      ),
+      css('.hamburger').styles(
+        display: .flex,
+        flexDirection: .column,
+        gap: .all(5.px),
+        cursor: .pointer,
+        padding: .all(8.px),
+        radius: .all(.circular(6.px)),
+        raw: {'margin-left': 'auto'},
+      ),
+      css('.hamburger:hover').styles(backgroundColor: surfaceMuted),
+      css('.header-nav').styles(
+        display: .none,
+        flexDirection: .column,
+        width: 100.percent,
+        gap: .all(0.px),
+        padding: .only(bottom: 12.px, top: 8.px),
+        border: .only(top: BorderSide.solid(color: borderColor, width: 1.px)),
+        raw: {'flex-basis': '100%'},
+      ),
+      css('.nav-toggle-input:checked ~ .header-nav').styles(display: .flex),
+      css('.nav-toggle-input:checked ~ .hamburger .hamburger-bar:nth-child(1)').styles(
+        raw: {'transform': 'translateY(7px) rotate(45deg)'},
+      ),
+      css('.nav-toggle-input:checked ~ .hamburger .hamburger-bar:nth-child(2)').styles(opacity: 0.0),
+      css('.nav-toggle-input:checked ~ .hamburger .hamburger-bar:nth-child(3)').styles(
+        raw: {'transform': 'translateY(-7px) rotate(-45deg)'},
+      ),
+      css('.nav-link').styles(
+        padding: .symmetric(vertical: 10.px, horizontal: 16.px),
+        fontSize: 0.95.rem,
+        width: 100.percent,
+        radius: .all(.circular(8.px)),
       ),
     ]),
   ];
