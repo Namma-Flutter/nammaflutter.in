@@ -39,7 +39,7 @@ void main() async {
             meta(attributes: {'name': 'og:title', 'content': 'Namma Flutter — Chennai\'s Flutter Community'}),
             meta(attributes: {'name': 'og:type', 'content': 'website'}),
             link(rel: 'manifest', href: 'manifest.json'),
-            link(rel: 'icon', href: 'favicon.ico'),
+            link(rel: 'icon', type: 'image/png', href: 'favicon.png'),
           ],
           body: const App(),
         ),
