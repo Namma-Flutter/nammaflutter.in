@@ -18,8 +18,8 @@ class Home extends StatelessComponent {
         headline: 'Namma Flutter Chennai',
         subtext:
             'Chennai\'s premier Flutter community, building the future of mobile development. Join us for Flutter learning, hands-on workshops, and community networking. Whether you\'re a beginner or an expert, there\'s something for everyone!',
-        primaryLabel: 'Join our Discord',
-        primaryHref: 'https://discord.gg/namma-flutter',
+        primaryLabel: 'Join our Telegram',
+        primaryHref: 'https://t.me/nammaflutter',
         secondaryLabel: 'View Events',
         secondaryHref: '/events',
       ),

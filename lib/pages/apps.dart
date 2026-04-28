@@ -21,6 +21,8 @@ class Apps extends StatelessComponent {
             title: app.name,
             description: app.description,
             href: app.repoUrl,
+            appStoreUrl: app.appStoreUrl,
+            playStoreUrl: app.playStoreUrl,
             tags: app.tags,
             external: true,
           ),

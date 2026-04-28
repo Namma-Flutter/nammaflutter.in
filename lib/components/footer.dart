@@ -31,7 +31,8 @@ class Footer extends StatelessComponent {
               _extLink('GitHub', SocialLinks.github),
             ]),
             _col('Connect', [
-              _extLink('Discord', SocialLinks.discord),
+              _extLink('Telegram', SocialLinks.telegram),
+              _extLink('WhatsApp', SocialLinks.whatsapp),
               _extLink('Twitter / X', SocialLinks.twitter),
               _extLink('LinkedIn', SocialLinks.linkedin),
               _extLink('Medium', SocialLinks.medium),
@@ -40,8 +41,12 @@ class Footer extends StatelessComponent {
         ]),
         div(classes: 'footer-bottom', [
           p([.text('© ${DateTime.now().year} Namma Flutter Chennai. All rights reserved.')]),
-          p([
-            .text('Made with 💙 in Chennai'),
+          div(classes: 'footer-built-with', [
+            a(
+              href: 'https://jaspr.dev',
+              attributes: {'target': '_blank', 'rel': 'noopener noreferrer', 'aria-label': 'Built with Jaspr'},
+              [img(src: 'images/builtwithjaspr.svg', width: 106, height: 40, attributes: {'alt': 'Built with Jaspr'})]
+            ),
           ]),
         ]),
       ]),
@@ -138,6 +143,18 @@ class Footer extends StatelessComponent {
       fontSize: 0.85.rem,
       color: .rgba(255, 255, 255, 0.45),
       margin: .zero,
+    ),
+    css('.footer-built-with').styles(
+      display: .flex,
+      alignItems: .center,
+      justifyContent: .center,
+    ),
+    css('.footer-built-with a').styles(
+      display: .block,
+      transition: Transition('opacity', duration: 150.ms),
+    ),
+    css('.footer-built-with a:hover').styles(
+      opacity: 0.8,
     ),
   ];
 }

@@ -18,23 +18,24 @@ class Contact extends StatelessComponent {
       subtitle: 'Questions, speaker pitches, sponsorship enquiries — all welcome.',
       child: div(classes: 'contact-grid', [
         div(classes: 'contact-info', [
-          _row('✉️', 'Email', SocialLinks.contactEmail, 'mailto:${SocialLinks.contactEmail}'),
-          _row('💬', 'Discord', 'Join the community server', SocialLinks.discord, external: true),
-          _row('🐙', 'GitHub', 'Namma-Flutter on GitHub', SocialLinks.github, external: true),
-          _row('🐦', 'Twitter / X', 'Follow us @NammaFlutter', SocialLinks.twitter, external: true),
-          _row('💼', 'LinkedIn', 'Connect on LinkedIn', SocialLinks.linkedin, external: true),
-          _row('✍️', 'Medium', 'Read our publication', SocialLinks.medium, external: true),
+          _row('images/gmail.svg', 'Email', SocialLinks.contactEmail, 'mailto:${SocialLinks.contactEmail}'),
+          _row('images/telegram.svg', 'Telegram', 'Join the community group', SocialLinks.telegram, external: true),
+          _row('images/whatsapp.svg', 'WhatsApp', 'Join the WhatsApp group', SocialLinks.whatsapp, external: true),
+          _row('images/github.svg', 'GitHub', 'Namma-Flutter on GitHub', SocialLinks.github, external: true),
+          _row('images/twitter.svg', 'Twitter / X', 'Follow us @nammaflutter', SocialLinks.twitter, external: true),
+          _row('images/linkedin.svg', 'LinkedIn', 'Connect on LinkedIn', SocialLinks.linkedin, external: true),
+          _row('images/medium.svg', 'Medium', 'Read our publication', SocialLinks.medium, external: true),
         ]),
         div(classes: 'contact-cta-panel', [
           h3(classes: 'contact-panel-title', [.text('Join the community')]),
           p(classes: 'contact-panel-desc', [
             .text(
               'The best way to be part of Namma Flutter is to show up. '
-              'Join our Discord, come to a meetup, or open a pull request. We\'ll take it from there.',
+              'Join our Telegram, come to a meetup, or open a pull request. We\'ll take it from there.',
             ),
           ]),
           div(classes: 'contact-panel-btns', [
-            Button.primary('Join Discord', SocialLinks.discord, external: true),
+            Button.primary('Join Telegram', SocialLinks.telegram, external: true),
             Button.secondary('Star on GitHub', SocialLinks.github, external: true),
           ]),
         ]),
@@ -42,10 +43,10 @@ class Contact extends StatelessComponent {
     );
   }
 
-  static Component _row(String icon, String label, String display, String href, {bool external = false}) {
+  static Component _row(String iconSrc, String label, String display, String href, {bool external = false}) {
     final attrs = external ? {'target': '_blank', 'rel': 'noopener noreferrer'} : <String, String>{};
     return a(href: href, classes: 'contact-row', attributes: attrs, [
-      span(classes: 'contact-row-icon', [.text(icon)]),
+      img(src: iconSrc, width: 24, height: 24, classes: 'contact-row-icon', attributes: {'alt': label}),
       div(classes: 'contact-row-text', [
         span(classes: 'contact-row-label', [.text(label)]),
         span(classes: 'contact-row-display', [.text(display)]),
@@ -78,7 +79,7 @@ class Contact extends StatelessComponent {
       border: .all(style: BorderStyle.solid, color: primaryColor, width: 1.px),
       shadow: BoxShadow(offsetX: 0.px, offsetY: 2.px, blur: 8.px, color: .rgba(1, 88, 155, 0.08)),
     ),
-    css('.contact-row-icon').styles(fontSize: 1.4.rem, lineHeight: 1.em),
+    css('.contact-row-icon').styles(width: 24.px, height: 24.px, raw: {'flex-shrink': '0'}),
     css('.contact-row-text').styles(display: .flex, flexDirection: .column, gap: .all(2.px)),
     css('.contact-row-label').styles(
       fontSize: 0.8.rem,
