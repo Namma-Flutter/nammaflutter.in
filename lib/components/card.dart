@@ -7,8 +7,6 @@ class NammaCard extends StatelessComponent {
   final String title;
   final String description;
   final String? href;
-  final String? appStoreUrl;
-  final String? playStoreUrl;
   final List<String> tags;
   final bool external;
 
@@ -16,8 +14,6 @@ class NammaCard extends StatelessComponent {
     required this.title,
     required this.description,
     this.href,
-    this.appStoreUrl,
-    this.playStoreUrl,
     this.tags = const [],
     this.external = false,
     super.key,
@@ -40,25 +36,6 @@ class NammaCard extends StatelessComponent {
       if (tags.isNotEmpty)
         div(classes: 'card-tags', [
           for (final t in tags) span(classes: 'card-tag', [.text(t)]),
-        ]),
-      if (appStoreUrl != null || playStoreUrl != null)
-        div(classes: 'card-stores', [
-          if (appStoreUrl != null)
-            a(
-              href: appStoreUrl!,
-              attributes: {'target': '_blank', 'rel': 'noopener noreferrer'},
-              [
-                img(src: 'images/appstore.svg', height: 40, attributes: {'alt': 'Download on the App Store'}),
-              ],
-            ),
-          if (playStoreUrl != null)
-            a(
-              href: playStoreUrl!,
-              attributes: {'target': '_blank', 'rel': 'noopener noreferrer'},
-              [
-                img(src: 'images/playstore.svg', height: 40, attributes: {'alt': 'Get it on Google Play'}),
-              ],
-            ),
         ]),
     ]);
   }
@@ -100,18 +77,6 @@ class NammaCard extends StatelessComponent {
       backgroundColor: Color('#E8F2FB'),
       padding: .symmetric(vertical: 3.px, horizontal: 10.px),
       radius: .all(.circular(999.px)),
-    ),
-    css('.card-stores').styles(
-      display: .flex,
-      gap: .all(12.px),
-      margin: .only(top: 8.px),
-    ),
-    css('.card-stores a').styles(
-      display: .block,
-      transition: Transition('transform', duration: 150.ms),
-    ),
-    css('.card-stores a:hover').styles(
-      transform: .translate(x: 0.px, y: (-2).px),
     ),
   ];
 }

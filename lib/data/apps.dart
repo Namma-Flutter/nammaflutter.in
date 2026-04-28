@@ -4,8 +4,6 @@ class AppItem {
   final String description;
   final String repoUrl;
   final String? siteUrl;
-  final String? appStoreUrl;
-  final String? playStoreUrl;
   final List<String> tags;
 
   const AppItem({
@@ -14,8 +12,6 @@ class AppItem {
     required this.description,
     required this.repoUrl,
     this.siteUrl,
-    this.appStoreUrl,
-    this.playStoreUrl,
     this.tags = const [],
   });
 }
@@ -27,8 +23,6 @@ const apps = <AppItem>[
     description:
         'A fully functional digital wallet app built with Flutter, showcasing real-world payment UX patterns and state management.',
     repoUrl: 'https://github.com/Namma-Flutter/namma_wallet',
-    appStoreUrl: 'https://apps.apple.com/in/app/namma-wallet/id6757295408',
-    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.nammaflutter.nammawallet',
     tags: ['Flutter', 'Finance', 'State Management'],
   ),
   AppItem(
