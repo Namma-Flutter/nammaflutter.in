@@ -43,6 +43,9 @@ class Section extends StatelessComponent {
     css('.section').styles(
       padding: .symmetric(vertical: 80.px),
       width: 100.percent,
+      flex: Flex(grow: 1),
+      display: .flex,
+      flexDirection: .column,
     ),
     css('.section-muted').styles(backgroundColor: surfaceMuted),
     css('.container').styles(
