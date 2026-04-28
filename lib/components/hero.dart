@@ -38,7 +38,7 @@ class Hero extends StatelessComponent {
           ]),
         ]),
         div(classes: 'hero-logo', [
-          img(src: 'images/logo.svg', width: 220, attributes: {'alt': 'Namma Flutter logo'}),
+          img(src: 'images/logo.png', width: 280, attributes: {'alt': 'Namma Flutter mascot'}),
         ]),
       ]),
     ]);

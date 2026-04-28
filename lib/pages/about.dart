@@ -36,7 +36,7 @@ class About extends StatelessComponent {
       div(classes: 'stats-band', [
         div(classes: 'container', [
           div(classes: 'stats-grid', [
-            _stat('4,000+', 'Community Members'),
+            _stat('6,000+', 'Community Members'),
             _stat('30+', 'Speakers'),
             _stat('12+', 'Workshops'),
           ]),
