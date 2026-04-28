@@ -71,9 +71,21 @@ jobs:
             echo "  rendered $route"
           done
 
-          # Copy compiled JS, images, CSS, and other static assets
+          # 1. Copy source static assets first (images, favicon, manifest, etc.)
+          cp -r web/. dist/
+          # 2. Overlay compiled output (JS, CSS) — takes precedence over any same-named source file
           cp -r build/jaspr/web/. dist/
           echo "Static assets copied"
+
+          # Fix absolute nav paths for the GitHub Pages subpath.
+          # The site is at /nammaflutter.in/ so href="/about" would navigate to the
+          # wrong root. Rewrite every internal absolute href to include the base path.
+          REPO_NAME="nammaflutter.in"
+          find dist -name "*.html" -exec sed -i \
+            -e "s|href=\"/\"|href=\"/${REPO_NAME}/\"|g" \
+            -e "s|href=\"/\([^/\"]\)|href=\"/${REPO_NAME}/\1|g" \
+            {} +
+          echo "Absolute paths rewritten for subpath deployment"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

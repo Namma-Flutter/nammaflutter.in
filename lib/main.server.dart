@@ -28,6 +28,7 @@ void main() async {
       return render(
         Document(
           title: 'Namma Flutter — Chennai\'s Flutter Community',
+          base: 'nammaflutter.in',
           head: [
             meta(attributes: {'name': 'viewport', 'content': 'width=device-width, initial-scale=1.0'}),
             meta(
