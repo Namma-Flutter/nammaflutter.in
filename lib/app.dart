@@ -20,21 +20,25 @@ class App extends StatelessComponent {
   Component build(BuildContext context) {
     return div(classes: 'main', [
       const Header(),
-      Router(
-        routes: [
-          Route(path: '/', title: 'Home', builder: (context, state) => const Home()),
-          Route(path: '/about', title: 'About', builder: (context, state) => const About()),
-          Route(path: '/apps', title: 'Apps', builder: (context, state) => const Apps()),
-          Route(path: '/programs', title: 'Programs', builder: (context, state) => const Programs()),
-          Route(path: '/store', title: 'Store', builder: (context, state) => const Store()),
-          Route(path: '/events', title: 'Events', builder: (context, state) => const Events()),
-          Route(path: '/team', title: 'Team', builder: (context, state) => const Team()),
-          Route(path: '/contact', title: 'Contact', builder: (context, state) => const Contact()),
-        ],
-      ),
+      div(classes: 'content-area', [
+        Router(
+          routes: [
+            Route(path: '/', title: 'Home', builder: (context, state) => _page(const Home())),
+            Route(path: '/about', title: 'About', builder: (context, state) => _page(const About())),
+            Route(path: '/apps', title: 'Apps', builder: (context, state) => _page(const Apps())),
+            Route(path: '/programs', title: 'Programs', builder: (context, state) => _page(const Programs())),
+            Route(path: '/store', title: 'Store', builder: (context, state) => _page(const Store())),
+            Route(path: '/events', title: 'Events', builder: (context, state) => _page(const Events())),
+            Route(path: '/team', title: 'Team', builder: (context, state) => _page(const Team())),
+            Route(path: '/contact', title: 'Contact', builder: (context, state) => _page(const Contact())),
+          ],
+        ),
+      ]),
       const Footer(),
     ]);
   }
+
+  static Component _page(Component child) => div(classes: 'page-fade-in', [child]);
 
   @css
   static List<StyleRule> get styles => [

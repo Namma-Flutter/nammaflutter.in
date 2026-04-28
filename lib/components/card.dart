@@ -26,16 +26,16 @@ class NammaCard extends StatelessComponent {
             href: href!,
             attributes: external ? {'target': '_blank', 'rel': 'noopener noreferrer'} : null,
             classes: 'card-title-link',
-            [text(title)],
+            [Component.text(title)],
           )
-        : text(title);
+        : Component.text(title);
 
     return div(classes: 'card', [
       h3(classes: 'card-title', [titleNode]),
-      p(classes: 'card-desc', [.text(description)]),
+      p(classes: 'card-desc', [Component.text(description)]),
       if (tags.isNotEmpty)
         div(classes: 'card-tags', [
-          for (final t in tags) span(classes: 'card-tag', [.text(t)]),
+          for (final t in tags) span(classes: 'card-tag', [Component.text(t)]),
         ]),
     ]);
   }

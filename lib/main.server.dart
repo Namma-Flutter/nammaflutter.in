@@ -40,6 +40,7 @@ void main() async {
             meta(attributes: {'name': 'og:type', 'content': 'website'}),
             link(rel: 'manifest', href: 'manifest.json'),
             link(rel: 'icon', type: 'image/png', href: 'favicon.png'),
+            link(rel: 'stylesheet', href: 'styles.css'),
           ],
           body: const App(),
         ),
