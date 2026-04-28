@@ -1,0 +1,89 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deployment at a time; don't cancel in-progress runs.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Dart SDK
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: 3.11.5
+
+      - name: Cache pub dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.pub-cache
+          key: pub-${{ hashFiles('pubspec.lock') }}
+          restore-keys: pub-
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Activate jaspr CLI
+        run: dart pub global activate jaspr_cli
+
+      - name: Build
+        run: jaspr build --target-os linux
+
+      - name: Pre-render all routes
+        run: |
+          set -e
+
+          # Find the compiled server binary in build/jaspr/
+          SERVER=$(find "$(pwd)/build/jaspr" -maxdepth 1 -type f \
+            ! -name "*.dart" ! -name "*.yaml" ! -name "*.json" | head -1)
+          if [ -z "$SERVER" ]; then
+            echo "Server binary not found. Contents of build/jaspr:"; ls -la build/jaspr/; exit 1
+          fi
+          chmod +x "$SERVER"
+          echo "Using server: $SERVER"
+
+          # Run from build/jaspr/ so the server resolves its web/ directory
+          (cd build/jaspr && "$SERVER" > /tmp/server.log 2>&1 &)
+
+          # Wait up to 30 s for the server to accept connections
+          timeout 30 bash -c 'until curl -sf http://localhost:8080/ -o /dev/null; do sleep 1; done'
+          echo "Server ready"
+
+          # Crawl every route and save pre-rendered HTML
+          mkdir -p dist
+          for route in "/" "/about" "/apps" "/programs" "/events" "/team" "/contact" "/store"; do
+            mkdir -p "dist${route}"
+            curl -sf "http://localhost:8080${route}" -o "dist${route}index.html"
+            echo "  rendered $route"
+          done
+
+          # Copy compiled JS, images, CSS, and other static assets
+          cp -r build/jaspr/web/. dist/
+          echo "Static assets copied"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
