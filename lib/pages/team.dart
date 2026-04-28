@@ -32,7 +32,10 @@ class Team extends StatelessComponent {
   static Component _memberCard(TeamMember m) {
     return div(classes: 'member-card', [
       div(classes: 'member-avatar', [
-        span(classes: 'member-initials', [.text(_initials(m.name))]),
+        if (m.photo != null)
+          img(src: m.photo!, classes: 'member-photo', attributes: {'alt': m.name})
+        else
+          span(classes: 'member-initials', [.text(_initials(m.name))]),
       ]),
       div(classes: 'member-info', [
         h4(classes: 'member-name', [.text(m.name)]),
@@ -88,6 +91,12 @@ class Team extends StatelessComponent {
       justifyContent: .center,
       backgroundColor: primaryColor,
       radius: .all(.circular(12.px)),
+      overflow: .hidden,
+    ),
+    css('.member-photo').styles(
+      width: 100.percent,
+      height: 100.percent,
+      raw: {'object-fit': 'cover'},
     ),
     css('.member-initials').styles(fontSize: 1.1.rem, fontWeight: .w700, color: Colors.white),
     css('.member-info').styles(display: .flex, flexDirection: .column, gap: .all(4.px)),
