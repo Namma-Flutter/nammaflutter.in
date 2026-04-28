@@ -47,7 +47,7 @@ void main() async {
     }),
   );
 
-  var handler = const Pipeline().addMiddleware(logRequests()).addHandler(router);
+  var handler = const Pipeline().addMiddleware(logRequests()).addHandler(router.call);
 
   var reloadLock = activeReloadLock = Object();
   var server = await shelf_io.serve(handler, InternetAddress.anyIPv4, 8080, shared: true);

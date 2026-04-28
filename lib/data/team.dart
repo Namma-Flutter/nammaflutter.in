@@ -1,6 +1,5 @@
 class TeamMember {
   final String name;
-  final String role;
   final String? bio;
   final String? photo;
   final String? github;
@@ -9,7 +8,6 @@ class TeamMember {
 
   const TeamMember({
     required this.name,
-    required this.role,
     this.bio,
     this.photo,
     this.github,
@@ -18,32 +16,27 @@ class TeamMember {
   });
 }
 
-const founders = <TeamMember>[
+const team = <TeamMember>[
   TeamMember(
     name: 'Justin Benito',
-    role: 'Co-founder',
-    bio:
-        'Sparked Namma Flutter after connecting with Abhishek Doshi and the Flutter India community. Passionate about growing Flutter grassroots in Chennai.',
+    bio: 'Sparked Namma Flutter after connecting with Abhishek Doshi and the Flutter India community. Passionate about growing Flutter grassroots in Chennai.',
     github: 'https://github.com/JustinBenito',
-    twitter: 'https://x.com/JustinBenito', // TODO: confirm
+    twitter: 'https://x.com/JustinBenito',
   ),
   TeamMember(
-    name: 'Harish A',
-    role: 'Co-founder',
-    bio:
-        'Co-built Namma Flutter from the ground up. Focused on community ops, speaker programs, and making every event count.',
+    name: 'Harish Anbalagan',
+    bio: 'Creator of Namma Wallet. Focused on community ops, speaker programs, and making every event count.',
     github: 'https://github.com/harishwarrior',
-    twitter: 'https://x.com/harishwarrior', // TODO: confirm
+    twitter: 'https://x.com/harishwarrior',
   ),
-];
-
-const coreTeam = <TeamMember>[
-  TeamMember(
-    name: 'Akash Senthil',
-    role: 'Core Team · Speaker',
-    bio: 'Regular speaker and contributor — covers Flutter internals, performance, and tooling.',
-    github: 'https://github.com/AkashSenthil', // TODO: confirm
-  ),
-  // TODO: add more core team members
-  // TeamMember(name: 'Name', role: 'Role', bio: '...'),
+  TeamMember(name: 'Praveen Pandiyan'),
+  TeamMember(name: 'Shiva Prasath R'),
+  TeamMember(name: 'Harish Raj R'),
+  TeamMember(name: 'Laksshitha B'),
+  TeamMember(name: 'Jasim Anwar J S'),
+  TeamMember(name: 'Kumaran Karunakaran'),
+  TeamMember(name: 'Sanju R'),
+  TeamMember(name: 'Vaishnavi G'),
+  TeamMember(name: 'Lashika N B'),
+  TeamMember(name: 'Santosh A M'),
 ];

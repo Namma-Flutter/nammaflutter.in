@@ -14,10 +14,10 @@ class Home extends StatelessComponent {
   Component build(BuildContext context) {
     return .fragment([
       const Hero(
-        kicker: 'Chennai\'s Flutter Community',
-        headline: 'Build. Learn. Connect. Namma style.',
+        kicker: 'Flutter Community Events & Meetups',
+        headline: 'Namma Flutter Chennai',
         subtext:
-            'Namma Flutter is Chennai\'s largest Flutter developer community — monthly meetups, hackathons, open-source apps, and a growing network of 4,000+ members.',
+            'Chennai\'s premier Flutter community, building the future of mobile development. Join us for Flutter learning, hands-on workshops, and community networking. Whether you\'re a beginner or an expert, there\'s something for everyone!',
         primaryLabel: 'Join our Discord',
         primaryHref: 'https://discord.gg/namma-flutter',
         secondaryLabel: 'View Events',

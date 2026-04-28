@@ -4,6 +4,7 @@ import 'package:jaspr/jaspr.dart';
 import '../components/cta_band.dart';
 import '../components/section.dart';
 import '../constants/theme.dart';
+import '../data/sponsors.dart';
 
 @client
 class About extends StatelessComponent {
@@ -16,7 +17,7 @@ class About extends StatelessComponent {
         eyebrow: 'Our story',
         title: 'Born in Chennai, built for everyone.',
         subtitle:
-            'Namma Flutter started with a simple idea: Flutter developers in Chennai deserve their own space to learn, build, and grow together.',
+            'Chennai\'s premier Flutter community, building the future of mobile development. Whether you\'re a beginner or an expert, there\'s something for everyone.',
         child: div(classes: 'about-story', [
           p([
             .text(
@@ -27,7 +28,7 @@ class About extends StatelessComponent {
           p([
             .text(
               '"Namma" means "ours" in Tamil. That\'s the spirit behind everything we do — this community belongs to everyone in it. '
-              'We\'re here for the first-time Flutter dev writing their first widget, and the veteran engineer shipping production apps.',
+              'Join us for Flutter learning, hands-on workshops, and community networking.',
             ),
           ]),
         ]),
@@ -35,10 +36,9 @@ class About extends StatelessComponent {
       div(classes: 'stats-band', [
         div(classes: 'container', [
           div(classes: 'stats-grid', [
-            _stat('4,000+', 'Community members'),
-            _stat('30+', 'Speakers featured'),
-            _stat('10+', 'Events hosted'),
-            _stat('4+', 'Open-source apps'),
+            _stat('4,000+', 'Community Members'),
+            _stat('30+', 'Speakers'),
+            _stat('12+', 'Workshops'),
           ]),
         ]),
       ]),
@@ -47,26 +47,21 @@ class About extends StatelessComponent {
         title: 'More than meetups.',
         muted: true,
         child: div(classes: 'about-pillars', [
-          _pillar(
-            '🎙️',
-            'Monthly Meetups',
-            'Fly with Flutter — our flagship monthly event — brings talks, live coding, and networking to Flutter developers of all levels.',
-          ),
-          _pillar(
-            '⚡',
-            'Hackathons',
-            'Quarterly mini-hackathons where teams build real Flutter apps in 24 hours. Past themes: games, fintech, accessibility tools.',
-          ),
-          _pillar(
-            '📱',
-            'Open Source',
-            'We ship real apps together — Namma Wallet, Flappy Dash, Namma UI Kit. Community-built, community-maintained.',
-          ),
-          _pillar(
-            '🤝',
-            'Inclusion',
-            'Dedicated programs like Flutteristas celebrate underrepresented voices in tech. Everyone has a place here.',
-          ),
+          _pillar('🤝', 'Networking', 'Opportunities to network with thousands of Flutter enthusiasts across Chennai and beyond.'),
+          _pillar('🎤', 'Talks', 'Regular sessions led by experienced community members and industry speakers.'),
+          _pillar('🛠️', 'Workshops & Meetups', 'Hands-on workshops and hackathons where you build real Flutter apps.'),
+          _pillar('📖', 'Knowledge Resources', 'Access to curated tutorials, open-source code, and recorded sessions.'),
+        ]),
+      ),
+      Section(
+        eyebrow: 'Our sponsors',
+        title: 'Backed by great companies.',
+        subtitle: 'These organisations make our events and programs possible.',
+        child: div(classes: 'sponsors-grid', [
+          for (final s in sponsors)
+            div(classes: 'sponsor-card', [
+              p(classes: 'sponsor-name', [.text(s.name)]),
+            ]),
         ]),
       ),
       Section(
@@ -74,6 +69,7 @@ class About extends StatelessComponent {
         title: 'Growing beyond Chennai.',
         subtitle:
             'As of 2026, Namma Flutter has expanded to Madurai and collaborates regularly with FOSS United. DevCon is now an annual flagship event drawing 200+ attendees.',
+        muted: true,
         child: .empty(),
       ),
       const CtaBand(
@@ -142,5 +138,27 @@ class About extends StatelessComponent {
     css('.pillar-icon').styles(fontSize: 1.8.rem),
     css('.pillar-title').styles(fontSize: 1.rem, fontWeight: .w700, color: textColor),
     css('.pillar-body').styles(fontSize: 0.9.rem, color: mutedTextColor, lineHeight: 1.6.em),
+    css('.sponsors-grid').styles(
+      display: .grid,
+      gap: .all(16.px),
+      raw: {'grid-template-columns': 'repeat(auto-fit, minmax(180px, 1fr))'},
+    ),
+    css('.sponsor-card').styles(
+      display: .flex,
+      alignItems: .center,
+      justifyContent: .center,
+      padding: .symmetric(vertical: 24.px, horizontal: 20.px),
+      backgroundColor: surfaceMuted,
+      border: .all(style: BorderStyle.solid, color: borderColor, width: 1.px),
+      radius: .all(.circular(10.px)),
+      minHeight: 80.px,
+    ),
+    css('.sponsor-name').styles(
+      fontSize: 1.rem,
+      fontWeight: .w600,
+      color: mutedTextColor,
+      textAlign: .center,
+      margin: .zero,
+    ),
   ];
 }
