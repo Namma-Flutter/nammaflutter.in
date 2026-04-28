@@ -75,7 +75,7 @@ class About extends StatelessComponent {
       const CtaBand(
         headline: 'Want to get involved? Come say hi.',
         buttonLabel: 'Contact us',
-        buttonHref: 'contact',
+        buttonHref: '/contact',
       ),
     ]);
   }

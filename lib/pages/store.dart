@@ -21,7 +21,7 @@ class Store extends StatelessComponent {
               'Be the first to know when we launch.',
             ),
           ]),
-          Button.primary('Get notified — contact us', 'contact'),
+          Button.primary('Get notified — contact us', '/contact'),
         ]),
       ]),
     ]);

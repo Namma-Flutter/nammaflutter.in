@@ -36,7 +36,7 @@ class Programs extends StatelessComponent {
       const CtaBand(
         headline: 'Want to speak, sponsor, or volunteer?',
         buttonLabel: 'Get in touch',
-        buttonHref: 'contact',
+        buttonHref: '/contact',
       ),
     ]);
   }
