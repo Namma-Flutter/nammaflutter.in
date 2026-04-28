@@ -36,7 +36,7 @@ class Header extends StatelessComponent {
         nav(classes: 'header-nav', [
           for (final route in _routes)
             a(
-              href: route.path,
+              href: route.path.substring(1),
               classes: active == route.path ? 'nav-link nav-link-active' : 'nav-link',
               [.text(route.label)],
             ),

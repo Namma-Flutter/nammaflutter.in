@@ -20,14 +20,14 @@ class Footer extends StatelessComponent {
           ]),
           div(classes: 'footer-links', [
             _col('Community', [
-              _link('About', '/about'),
-              _link('Events', '/events'),
-              _link('Programs', '/programs'),
-              _link('Team', '/team'),
+              _link('About', 'about'),
+              _link('Events', 'events'),
+              _link('Programs', 'programs'),
+              _link('Team', 'team'),
             ]),
             _col('Projects', [
-              _link('Apps', '/apps'),
-              _link('Store', '/store'),
+              _link('Apps', 'apps'),
+              _link('Store', 'store'),
               _extLink('GitHub', SocialLinks.github),
             ]),
             _col('Connect', [
