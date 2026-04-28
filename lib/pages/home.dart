@@ -21,7 +21,7 @@ class Home extends StatelessComponent {
         primaryLabel: 'Join our Telegram',
         primaryHref: 'https://t.me/nammaflutter',
         secondaryLabel: 'View Events',
-        secondaryHref: '/events',
+        secondaryHref: 'events',
       ),
       Section(
         eyebrow: 'Everything we do',
@@ -32,37 +32,37 @@ class Home extends StatelessComponent {
             icon: '🧑‍💻',
             title: 'About Us',
             description: 'Our story, mission, and the people who started it all.',
-            href: '/about',
+            href: 'about',
           ),
           const SectionPreview(
             icon: '📱',
             title: 'Apps',
             description: 'Open-source Flutter apps built by the Namma community.',
-            href: '/apps',
+            href: 'apps',
           ),
           const SectionPreview(
             icon: '🎓',
             title: 'Programs',
             description: 'Workshops, hackathons, and recurring programs for every level.',
-            href: '/programs',
+            href: 'programs',
           ),
           const SectionPreview(
             icon: '🛍️',
             title: 'Store',
             description: 'Namma Flutter merch — coming soon.',
-            href: '/store',
+            href: 'store',
           ),
           const SectionPreview(
             icon: '📅',
             title: 'Events',
             description: 'Past and upcoming meetups, DevCons, and conferences.',
-            href: '/events',
+            href: 'events',
           ),
           const SectionPreview(
             icon: '👥',
             title: 'Team',
             description: 'Meet the organizers and speakers behind Namma Flutter.',
-            href: '/team',
+            href: 'team',
           ),
         ]),
         muted: true,
@@ -70,7 +70,7 @@ class Home extends StatelessComponent {
       const CtaBand(
         headline: 'Ready to be part of Chennai\'s Flutter community?',
         buttonLabel: 'Get in touch',
-        buttonHref: '/contact',
+        buttonHref: 'contact',
       ),
     ]);
   }

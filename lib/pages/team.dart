@@ -24,7 +24,7 @@ class Team extends StatelessComponent {
       const CtaBand(
         headline: 'Want to contribute? We\'d love to have you.',
         buttonLabel: 'Join the community',
-        buttonHref: '/contact',
+        buttonHref: 'contact',
       ),
     ]);
   }
