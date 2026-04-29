@@ -25,6 +25,7 @@ class Contact extends StatelessComponent {
           _row('images/twitter.svg', 'Twitter / X', 'Follow us @nammaflutter', SocialLinks.twitter, external: true),
           _row('images/linkedin.svg', 'LinkedIn', 'Connect on LinkedIn', SocialLinks.linkedin, external: true),
           _row('images/medium.svg', 'Medium', 'Read our publication', SocialLinks.medium, external: true),
+          _row('images/youtube.svg', 'YouTube', 'Watch on YouTube', SocialLinks.youtube, external: true),
         ]),
         div(classes: 'contact-cta-panel', [
           h3(classes: 'contact-panel-title', [.text('Join the community')]),

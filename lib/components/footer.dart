@@ -36,6 +36,7 @@ class Footer extends StatelessComponent {
               _extLink('Twitter / X', SocialLinks.twitter),
               _extLink('LinkedIn', SocialLinks.linkedin),
               _extLink('Medium', SocialLinks.medium),
+              _extLink('YouTube', SocialLinks.youtube),
             ]),
           ]),
         ]),

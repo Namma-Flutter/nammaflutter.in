@@ -8,5 +8,6 @@ class SocialLinks {
   static const meetup = 'https://www.meetup.com/nammaflutter/';
   static const luma = 'https://lu.ma/calendar/manage/cal-WRIOX8p2L8zRrrK';
   static const whatsapp = 'https://chat.whatsapp.com/GjhFMKXrkdt2c3RGOOyYqy';
+  static const youtube = 'https://www.youtube.com/@nammaflutter';
   static const contactEmail = 'hello@nammaflutter.com';
 }
