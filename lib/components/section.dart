@@ -48,11 +48,6 @@ class Section extends StatelessComponent {
       flexDirection: .column,
     ),
     css('.section-muted').styles(backgroundColor: surfaceMuted),
-    css('.container').styles(
-      maxWidth: 1120.px,
-      margin: .symmetric(horizontal: .auto),
-      padding: .symmetric(horizontal: 24.px),
-    ),
     css('.section-eyebrow').styles(
       color: accentColor,
       fontWeight: .w600,
@@ -75,9 +70,12 @@ class Section extends StatelessComponent {
     ),
     css.media(MediaQuery.screen(maxWidth: 768.px), [
       css('.section').styles(padding: .symmetric(vertical: 48.px)),
-      css('.container').styles(padding: .symmetric(horizontal: 16.px)),
       css('.section-title').styles(fontSize: 1.6.rem),
       css('.section-subtitle').styles(fontSize: 1.rem, margin: .only(bottom: 28.px)),
+    ]),
+    css.media(MediaQuery.screen(maxWidth: 480.px), [
+      css('.section').styles(padding: .symmetric(vertical: 40.px)),
+      css('.section-title').styles(fontSize: 1.35.rem),
     ]),
   ];
 }

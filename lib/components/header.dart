@@ -106,13 +106,6 @@ class Header extends StatelessComponent {
       transition: Transition('all', duration: 250.ms),
     ),
     css.media(MediaQuery.screen(maxWidth: 768.px), [
-      css('.header-nav').styles(gap: .all(2.px)),
-      css('.nav-link').styles(
-        padding: .symmetric(vertical: 4.px, horizontal: 8.px),
-        fontSize: 0.82.rem,
-      ),
-    ]),
-    css.media(MediaQuery.screen(maxWidth: 640.px), [
       css('.header-inner').styles(
         flexWrap: .wrap,
         height: .auto,

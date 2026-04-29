@@ -166,7 +166,7 @@ class Footer extends StatelessComponent {
       css('.site-footer').styles(padding: .symmetric(vertical: 40.px)),
       css('.footer-top').styles(flexDirection: .column, gap: .all(28.px)),
       css('.footer-brand').styles(maxWidth: 100.percent),
-      css('.footer-links').styles(gap: .all(20.px)),
+      css('.footer-links').styles(flexDirection: .column, gap: .all(24.px)),
       css('.footer-bottom').styles(flexDirection: .column, alignItems: .center, textAlign: .center),
     ]),
   ];

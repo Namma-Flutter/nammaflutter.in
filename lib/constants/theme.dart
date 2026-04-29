@@ -53,4 +53,12 @@ List<StyleRule> get globalStyles => [
     padding: .zero,
     raw: {'list-style': 'none'},
   ),
+  css('.container').styles(
+    maxWidth: 1120.px,
+    margin: .symmetric(horizontal: .auto),
+    padding: .symmetric(horizontal: 24.px),
+  ),
+  css.media(MediaQuery.screen(maxWidth: 768.px), [
+    css('.container').styles(padding: .symmetric(horizontal: 16.px)),
+  ]),
 ];

@@ -162,7 +162,6 @@ class About extends StatelessComponent {
     ),
     css.media(MediaQuery.screen(maxWidth: 640.px), [
       css('.stats-band').styles(padding: .symmetric(vertical: 32.px)),
-      css('.stats-grid').styles(raw: {'grid-template-columns': 'repeat(3, 1fr)'}),
       css('.stat-value').styles(fontSize: 1.75.rem),
       css('.about-pillars').styles(raw: {'grid-template-columns': '1fr'}),
       css('.sponsors-grid').styles(raw: {'grid-template-columns': '1fr'}),
