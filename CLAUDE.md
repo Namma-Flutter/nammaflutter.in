@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**nammaflutter.in** is the marketing website for Namma Flutter — Chennai's largest Flutter developer community. It is a pure Jaspr web app (no Flutter SDK dependency) with server-side rendering and client-side hydration.
+**nammaflutter.com** is the marketing website for Namma Flutter — Chennai's largest Flutter developer community. It is a pure Jaspr web app (no Flutter SDK dependency) with server-side rendering and client-side hydration.
 
 - **Dart SDK**: 3.11.5
 - **Jaspr mode**: `server` (no flutter embedding)

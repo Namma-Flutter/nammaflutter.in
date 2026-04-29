@@ -1,4 +1,4 @@
-# nammaflutter.in
+# nammaflutter.com
 
 Official website for **Namma Flutter** — Chennai's largest Flutter developer community.
 
