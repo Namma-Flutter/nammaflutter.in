@@ -15,42 +15,51 @@ class Program {
 const programs = <Program>[
   Program(
     name: 'Fly with Flutter',
-    frequency: 'Monthly',
+    frequency: 'Regular',
     description:
-        'Our flagship monthly meetup — talks, live coding, and networking for Flutter developers at every level. Open to all.',
-    icon: '🚀',
+        'College and school-focused events that bring Flutter to campuses across Tamil Nadu, sparking curiosity in the next generation of Flutter developers.',
+    icon: '✈️',
   ),
   Program(
-    name: 'Annual Beginner Workshop',
-    frequency: 'Yearly',
+    name: 'Flut-Hacks',
+    frequency: 'Annual',
     description:
-        'A full-day hands-on workshop that takes complete beginners from zero to shipping their first Flutter app.',
-    icon: '🎓',
-  ),
-  Program(
-    name: 'Mini Hackathons',
-    frequency: 'Quarterly',
-    description:
-        'Weekend sprints where teams of 2–4 build a working Flutter app in 24 hours. Past themes: games, fintech, accessibility.',
+        'Our annual Flutter hackathon where teams race to build innovative apps under the clock. A fresh identity is coming soon — stay tuned!',
     icon: '⚡',
   ),
   Program(
-    name: 'FOSS United Collabs',
-    frequency: 'Ad-hoc',
+    name: 'Namma Workshops',
+    frequency: 'Regular',
     description:
-        'Joint events with FOSS United Chennai — open-source contributions, workshops, and cross-community talks.',
-    icon: '🤝',
+        'Hands-on sessions covering Flutter fundamentals to advanced topics — open to all skill levels and focused on real-world project building.',
+    icon: '🎓',
   ),
   Program(
-    name: 'Flutteristas / Singapengal in Flutter',
-    frequency: 'Bi-annual',
-    description: 'Dedicated sessions celebrating and amplifying women and non-binary voices in the Flutter ecosystem.',
+    name: 'Namma Devs',
+    frequency: 'Regular',
+    description:
+        'The Namma Flutter podcast — developer stories, deep dives into Flutter and Dart, and candid conversations with builders from the community.',
+    icon: '🎙️',
+  ),
+  Program(
+    name: 'DevRooms',
+    frequency: 'Regular',
+    description:
+        'A Flutter discussion arena where developers debate ideas, explore patterns, and dive deep into Flutter topics in an open forum format.',
+    icon: '💬',
+  ),
+  Program(
+    name: 'Namma Flutteristas',
+    frequency: 'Regular',
+    description:
+        'Dedicated events celebrating and empowering women in Flutter — a welcoming space to learn, network, and lead within the community.',
     icon: '💜',
   ),
   Program(
-    name: 'Namma Madurai',
-    frequency: 'Yearly',
-    description: 'Taking the community beyond Chennai — our regional expansion brings Namma Flutter events to Madurai.',
-    icon: '🌟',
+    name: 'Namma Flutter RoadShow',
+    frequency: 'Ad-hoc',
+    description:
+        'Taking Namma Flutter beyond Chennai — our road show travels to different cities and towns, growing the Flutter community everywhere.',
+    icon: '🌍',
   ),
 ];

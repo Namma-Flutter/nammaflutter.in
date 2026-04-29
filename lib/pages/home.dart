@@ -1,6 +1,7 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 
+import '../components/college_ticker.dart';
 import '../components/cta_band.dart';
 import '../components/hero.dart';
 import '../components/section.dart';
@@ -23,6 +24,7 @@ class Home extends StatelessComponent {
         secondaryLabel: 'View Events',
         secondaryHref: '/events',
       ),
+      const CollegeTicker(),
       Section(
         eyebrow: 'Everything we do',
         title: 'Explore Namma Flutter',
