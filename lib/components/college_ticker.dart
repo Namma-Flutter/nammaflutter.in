@@ -35,8 +35,8 @@ class CollegeTicker extends StatelessComponent {
     ]),
     css('.ticker-wrap').styles(
       display: .flex,
-      alignItems: .center,
       padding: .symmetric(vertical: 14.px),
+      alignItems: .center,
       backgroundColor: surfaceMuted,
       raw: {
         'border-top': '1px solid #E2E8F0',
@@ -61,17 +61,17 @@ class CollegeTicker extends StatelessComponent {
       raw: {'animation-play-state': 'paused'},
     ),
     css('.ticker-lead').styles(
+      padding: .symmetric(horizontal: 24.px),
+      color: primaryColor,
       fontSize: 0.9.rem,
       fontWeight: .w700,
-      color: primaryColor,
-      padding: .symmetric(horizontal: 24.px),
       raw: {'white-space': 'nowrap'},
     ),
     css('.ticker-item').styles(
+      padding: .symmetric(horizontal: 16.px),
+      color: textColor,
       fontSize: 0.88.rem,
       fontWeight: .w500,
-      color: textColor,
-      padding: .symmetric(horizontal: 16.px),
       raw: {'white-space': 'nowrap'},
     ),
     css('.ticker-sep').styles(

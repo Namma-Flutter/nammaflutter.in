@@ -29,7 +29,7 @@ const apps = <AppItem>[
     name: 'Flappy Dash',
     tagline: 'Flutter game in a weekend',
     description:
-        'A Flappy Bird–inspired game built at a Namma Flutter hackathon. Pure Flutter, no game engine — just canvas and physics.',
+        'A Flappy Bird inspired game built at a Namma Flutter hackathon. Pure Flutter, no game engine — just canvas and physics.',
     repoUrl: 'https://github.com/Namma-Flutter/flappy_dash',
     tags: ['Flutter', 'Game', 'Canvas'],
   ),
@@ -49,5 +49,4 @@ const apps = <AppItem>[
     repoUrl: 'https://github.com/Namma-Flutter/dash_race',
     tags: ['Flutter', 'Game', 'Animation'],
   ),
-  // TODO: add more community apps here
 ];

@@ -43,9 +43,9 @@ class App extends StatelessComponent {
   @css
   static List<StyleRule> get styles => [
     css('.page-fade-in').styles(
-      flex: Flex(grow: 1),
       display: .flex,
       flexDirection: .column,
+      flex: Flex(grow: 1),
     ),
     css('.main').styles(
       display: .flex,
@@ -53,9 +53,9 @@ class App extends StatelessComponent {
       flexDirection: .column,
     ),
     css('.content-area').styles(
-      flex: Flex(grow: 1),
       display: .flex,
       flexDirection: .column,
+      flex: Flex(grow: 1),
     ),
   ];
 }

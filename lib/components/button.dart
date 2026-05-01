@@ -50,18 +50,18 @@ class Button extends StatelessComponent {
       textDecoration: TextDecoration(line: .none),
     ),
     css('.btn-primary').styles(
-      backgroundColor: primaryColor,
-      color: Colors.white,
       radius: .all(.circular(999.px)),
+      color: Colors.white,
+      backgroundColor: primaryColor,
     ),
     css('.btn-primary:hover').styles(backgroundColor: primaryColorDark),
     css('.btn-secondary').styles(
-      backgroundColor: Colors.transparent,
-      color: primaryColor,
       border: .all(style: BorderStyle.solid, color: primaryColor, width: 2.px),
       radius: .all(.circular(8.px)),
+      color: primaryColor,
+      backgroundColor: Colors.transparent,
     ),
-    css('.btn-secondary:hover').styles(backgroundColor: primaryColor, color: Colors.white),
+    css('.btn-secondary:hover').styles(color: Colors.white, backgroundColor: primaryColor),
     css('.btn-ghost').styles(
       radius: .all(.circular(8.px)),
       color: primaryColor,
