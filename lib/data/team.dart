@@ -21,8 +21,7 @@ class TeamMember {
 const team = <TeamMember>[
   TeamMember(
     name: 'Justin Benito',
-    role: 'Founder',
-    bio: 'Sparked Namma Flutter after connecting with the Flutter India community. Passionate about growing Flutter grassroots in Chennai.',
+    bio: 'Namma Chennai pola varuma, Namma Flutter dhaan en peruma 🩵 Taking Namma Flutter from Chennai to Globe',
     github: 'https://github.com/justinbenito',
     twitter: 'https://x.com/JustinbenitoB',
     linkedin: 'https://linkedin.com/in/justinbenito',
@@ -30,7 +29,6 @@ const team = <TeamMember>[
   ),
   TeamMember(
     name: 'Harish Raj R',
-    role: 'Founder',
     linkedin: 'https://www.linkedin.com/in/harish-raj-r-/',
     photo: 'images/harishraj.png',
   ),
@@ -46,6 +44,7 @@ const team = <TeamMember>[
   ),
   TeamMember(
     name: 'Akash Senthil',
+    bio: 'A Flutter developer passionate about contributing to the community, actively serving and supporting others. As a core team member, I ensure events run smoothly while creating meaningful and engaging experiences for participants.',
     github: 'https://github.com/AkashProfessionalCoder',
     twitter: 'https://x.com/akashprocoder',
     linkedin: 'https://www.linkedin.com/in/akashprocoder',
