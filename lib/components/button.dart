@@ -39,15 +39,15 @@ class Button extends StatelessComponent {
   static List<StyleRule> get styles => [
     css('.btn').styles(
       display: .inlineFlex,
-      alignItems: .center,
-      justifyContent: .center,
-      padding: .symmetric(vertical: 12.px, horizontal: 28.px),
       minHeight: 44.px,
-      fontWeight: .w600,
-      fontSize: 1.rem,
-      textDecoration: TextDecoration(line: .none),
+      padding: .symmetric(vertical: 12.px, horizontal: 28.px),
       cursor: .pointer,
       transition: Transition('all', duration: 180.ms, curve: .easeOut),
+      justifyContent: .center,
+      alignItems: .center,
+      fontSize: 1.rem,
+      fontWeight: .w600,
+      textDecoration: TextDecoration(line: .none),
     ),
     css('.btn-primary').styles(
       backgroundColor: primaryColor,

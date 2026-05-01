@@ -12,6 +12,8 @@ class Hero extends StatelessComponent {
   final String primaryHref;
   final String secondaryLabel;
   final String secondaryHref;
+  final bool primaryExternal;
+  final bool secondaryExternal;
 
   const Hero({
     required this.kicker,
@@ -21,6 +23,8 @@ class Hero extends StatelessComponent {
     required this.primaryHref,
     required this.secondaryLabel,
     required this.secondaryHref,
+    this.primaryExternal = false,
+    this.secondaryExternal = false,
     super.key,
   });
 
@@ -33,8 +37,8 @@ class Hero extends StatelessComponent {
           h1(classes: 'hero-headline', [.text(headline)]),
           p(classes: 'hero-subtext', [.text(subtext)]),
           div(classes: 'hero-ctas', [
-            Button.primary(primaryLabel, primaryHref),
-            Button.secondary(secondaryLabel, secondaryHref),
+            Button.primary(primaryLabel, primaryHref, external: primaryExternal),
+            Button.secondary(secondaryLabel, secondaryHref, external: secondaryExternal),
           ]),
         ]),
         div(classes: 'hero-logo', [

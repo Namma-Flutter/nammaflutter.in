@@ -4,7 +4,6 @@ import 'package:jaspr/jaspr.dart';
 import '../components/cta_band.dart';
 import '../components/section.dart';
 import '../constants/theme.dart';
-import '../data/sponsors.dart';
 
 @client
 class About extends StatelessComponent {
@@ -21,7 +20,7 @@ class About extends StatelessComponent {
         child: div(classes: 'about-story', [
           p([
             .text(
-              'In 2024, Justin Benito and Harish — inspired by the Flutter India community and mentors like Abhishek Doshi — organised the first Namma Flutter meetup in Chennai. '
+              'In 2024, Justin Benito and Harish — inspired by the Flutter India community — organised the first Namma Flutter meetup in Chennai. '
               'What started as a small gathering quickly grew into a movement.',
             ),
           ]),
@@ -51,17 +50,6 @@ class About extends StatelessComponent {
           _pillar('🎤', 'Talks', 'Regular sessions led by experienced community members and industry speakers.'),
           _pillar('🛠️', 'Workshops & Meetups', 'Hands-on workshops and hackathons where you build real Flutter apps.'),
           _pillar('📖', 'Knowledge Resources', 'Access to curated tutorials, open-source code, and recorded sessions.'),
-        ]),
-      ),
-      Section(
-        eyebrow: 'Our sponsors',
-        title: 'Backed by great companies.',
-        subtitle: 'These organisations make our events and programs possible.',
-        child: div(classes: 'sponsors-grid', [
-          for (final s in sponsors)
-            div(classes: 'sponsor-card', [
-              p(classes: 'sponsor-name', [.text(s.name)]),
-            ]),
         ]),
       ),
       Section(
@@ -138,33 +126,10 @@ class About extends StatelessComponent {
     css('.pillar-icon').styles(fontSize: 1.8.rem),
     css('.pillar-title').styles(fontSize: 1.rem, fontWeight: .w700, color: textColor),
     css('.pillar-body').styles(fontSize: 0.9.rem, color: mutedTextColor, lineHeight: 1.6.em),
-    css('.sponsors-grid').styles(
-      display: .grid,
-      gap: .all(16.px),
-      raw: {'grid-template-columns': 'repeat(auto-fit, minmax(180px, 1fr))'},
-    ),
-    css('.sponsor-card').styles(
-      display: .flex,
-      alignItems: .center,
-      justifyContent: .center,
-      padding: .symmetric(vertical: 24.px, horizontal: 20.px),
-      backgroundColor: surfaceMuted,
-      border: .all(style: BorderStyle.solid, color: borderColor, width: 1.px),
-      radius: .all(.circular(10.px)),
-      minHeight: 80.px,
-    ),
-    css('.sponsor-name').styles(
-      fontSize: 1.rem,
-      fontWeight: .w600,
-      color: mutedTextColor,
-      textAlign: .center,
-      margin: .zero,
-    ),
     css.media(MediaQuery.screen(maxWidth: 640.px), [
       css('.stats-band').styles(padding: .symmetric(vertical: 32.px)),
       css('.stat-value').styles(fontSize: 1.75.rem),
       css('.about-pillars').styles(raw: {'grid-template-columns': '1fr'}),
-      css('.sponsors-grid').styles(raw: {'grid-template-columns': '1fr'}),
     ]),
   ];
 }

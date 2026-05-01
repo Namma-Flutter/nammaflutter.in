@@ -21,8 +21,10 @@ class Home extends StatelessComponent {
             'Chennai\'s premier Flutter community, building the future of mobile development. Join us for Flutter learning, hands-on workshops, and community networking. Whether you\'re a beginner or an expert, there\'s something for everyone!',
         primaryLabel: 'Join our Telegram',
         primaryHref: 'https://t.me/nammaflutter',
+        primaryExternal: true,
         secondaryLabel: 'View Events',
-        secondaryHref: '/events',
+        secondaryHref: 'https://lu.ma/Nammaflutter',
+        secondaryExternal: true,
       ),
       const CollegeTicker(),
       Section(

@@ -21,23 +21,25 @@ class NammaCard extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    final titleNode = href != null
-        ? a(
-            href: href!,
-            attributes: external ? {'target': '_blank', 'rel': 'noopener noreferrer'} : null,
-            classes: 'card-title-link',
-            [Component.text(title)],
-          )
-        : Component.text(title);
-
-    return div(classes: 'card', [
-      h3(classes: 'card-title', [titleNode]),
+    final children = [
+      h3(classes: 'card-title', [Component.text(title)]),
       p(classes: 'card-desc', [Component.text(description)]),
       if (tags.isNotEmpty)
         div(classes: 'card-tags', [
           for (final t in tags) span(classes: 'card-tag', [Component.text(t)]),
         ]),
-    ]);
+    ];
+
+    if (href != null) {
+      return a(
+        href: href!,
+        classes: 'card',
+        attributes: external ? {'target': '_blank', 'rel': 'noopener noreferrer'} : null,
+        children,
+      );
+    }
+
+    return div(classes: 'card', children);
   }
 
   @css
@@ -59,15 +61,8 @@ class NammaCard extends StatelessComponent {
       shadow: BoxShadow(offsetX: 0.px, offsetY: 8.px, blur: 24.px, color: .rgba(1, 88, 155, 0.12)),
       border: .all(style: BorderStyle.solid, color: primaryColor, width: 1.px),
     ),
-    css('.card-title').styles(fontSize: 1.1.rem, fontWeight: .w700, color: textColor),
-    css('.card-title-link').styles(
-      color: textColor,
-      textDecoration: TextDecoration(line: .none),
-      transition: Transition('color', duration: 150.ms),
-    ),
-    css('.card-title-link:hover').styles(
-      color: primaryColor,
-    ),
+    css('.card:hover .card-title').styles(color: primaryColor),
+    css('.card-title').styles(fontSize: 1.1.rem, fontWeight: .w700, color: textColor, transition: Transition('color', duration: 150.ms)),
     css('.card-desc').styles(fontSize: 0.95.rem, color: mutedTextColor, lineHeight: 1.6.em, flex: .grow(1)),
     css('.card-tags').styles(display: .flex, flexWrap: .wrap, gap: .all(6.px)),
     css('.card-tag').styles(

@@ -19,6 +19,7 @@ class Contact extends StatelessComponent {
       child: div(classes: 'contact-grid', [
         div(classes: 'contact-info', [
           _row('images/gmail.svg', 'Email', SocialLinks.contactEmail, 'mailto:${SocialLinks.contactEmail}'),
+          _row('images/logo.png', 'Luma', 'View upcoming events', SocialLinks.luma, external: true),
           _row('images/telegram.svg', 'Telegram', 'Join the community group', SocialLinks.telegram, external: true),
           _row('images/whatsapp.svg', 'WhatsApp', 'Join the WhatsApp group', SocialLinks.whatsapp, external: true),
           _row('images/github.svg', 'GitHub', 'Namma-Flutter on GitHub', SocialLinks.github, external: true),

@@ -39,7 +39,7 @@ class Team extends StatelessComponent {
       ]),
       div(classes: 'member-info', [
         h4(classes: 'member-name', [.text(m.name)]),
-        p(classes: 'member-role', [.text('Core Team Member')]),
+        p(classes: 'member-role', [.text(m.role ?? 'Core Team Member')]),
         if (m.bio != null) p(classes: 'member-bio', [.text(m.bio!)]),
         div(classes: 'member-links', [
           if (m.github != null)
