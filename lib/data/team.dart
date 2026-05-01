@@ -1,5 +1,6 @@
 class TeamMember {
   final String name;
+  final String? role;
   final String? bio;
   final String? photo;
   final String? github;
@@ -8,6 +9,7 @@ class TeamMember {
 
   const TeamMember({
     required this.name,
+    this.role,
     this.bio,
     this.photo,
     this.github,
@@ -19,7 +21,8 @@ class TeamMember {
 const team = <TeamMember>[
   TeamMember(
     name: 'Justin Benito',
-    bio: 'Sparked Namma Flutter after connecting with Abhishek Doshi and the Flutter India community. Passionate about growing Flutter grassroots in Chennai.',
+    role: 'Founder',
+    bio: 'Sparked Namma Flutter after connecting with the Flutter India community. Passionate about growing Flutter grassroots in Chennai.',
     github: 'https://github.com/justinbenito',
     twitter: 'https://x.com/JustinbenitoB',
     linkedin: 'https://linkedin.com/in/justinbenito',
@@ -27,6 +30,7 @@ const team = <TeamMember>[
   ),
   TeamMember(
     name: 'Harish Raj R',
+    role: 'Founder',
     linkedin: 'https://www.linkedin.com/in/harish-raj-r-/',
     photo: 'images/harishraj.png',
   ),
@@ -57,6 +61,36 @@ const team = <TeamMember>[
     github: 'https://github.com/kumaran-flutter',
     linkedin: 'https://www.linkedin.com/in/kumarankarunakaran/',
     photo: 'images/kumaran.png',
+  ),
+  TeamMember(
+    name: 'Kamlesh',
+    linkedin: 'https://www.linkedin.com/in/nithin-kamlesh/',
+    photo: 'images/kamlesh.png',
+  ),
+  TeamMember(
+    name: 'Santosh',
+    linkedin: 'https://www.linkedin.com/in/santosham/',
+    photo: 'images/santosh.png',
+  ),
+  TeamMember(
+    name: 'Sarvesh M Rao',
+    linkedin: 'https://www.linkedin.com/in/sarvesh-m-rao/',
+    photo: 'images/sarvesh.png',
+  ),
+  TeamMember(
+    name: 'Lashika',
+    linkedin: 'https://www.linkedin.com/in/lashika-n-b-2b6204289/',
+    photo: 'images/lashika.png',
+  ),
+  TeamMember(
+    name: 'Jasim Anwar',
+    linkedin: 'https://www.linkedin.com/in/jasim-anwar-81626925b/',
+    photo: 'images/jasim.png',
+  ),
+  TeamMember(
+    name: 'Sanju R',
+    linkedin: 'https://www.linkedin.com/in/sanju-r-/',
+    photo: 'images/sanju.png',
   ),
   TeamMember(
     name: 'Harish Anbalagan',
